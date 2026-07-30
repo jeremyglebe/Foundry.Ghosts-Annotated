@@ -26,7 +26,7 @@ function r() {
 }
 //#endregion
 //#region src/module/hooks/add-music-browser-button.ts
-var i = `${e}.openMusicBrowser`, a = "nin-ghosts-music-browser-button", o = "ninGhostsDebug", s = [
+var i = `${e}.openMusicBrowser`, a = "nin-ghosts-music-browser-button", o = [
 	"#playlists.sidebar-tab",
 	"#sidebar section#playlists",
 	"#sidebar .sidebar-tab[data-tab='playlists']",
@@ -36,37 +36,37 @@ var i = `${e}.openMusicBrowser`, a = "nin-ghosts-music-browser-button", o = "nin
 	"#sidebar .directory[data-document-name='Playlist']",
 	"[data-application-part='playlists']"
 ];
-function c() {
-	b("Registering music browser sidebar hooks."), Hooks.on("renderPlaylistDirectory", (...e) => {
-		b("renderPlaylistDirectory fired.", S(e)), l(e);
+function s() {
+	y("Registering music browser sidebar hooks."), Hooks.on("renderPlaylistDirectory", (...e) => {
+		y("renderPlaylistDirectory fired.", b(e)), c(e);
 	}), Hooks.on("renderPlaylists", (...e) => {
-		b("renderPlaylists fired.", S(e)), l(e);
+		y("renderPlaylists fired.", b(e)), c(e);
 	}), Hooks.on("renderSidebar", () => {
-		b("renderSidebar fired; scanning visible sidebar."), u();
+		y("renderSidebar fired; scanning visible sidebar."), l();
 	}), Hooks.on("renderSidebarTab", (...e) => {
-		b("renderSidebarTab fired.", S(e)), _(e) ? (b("renderSidebarTab matched playlist/sound tab."), l(e)) : b("renderSidebarTab did not match playlist/sound tab.");
+		y("renderSidebarTab fired.", b(e)), g(e) ? (y("renderSidebarTab matched playlist/sound tab."), c(e)) : y("renderSidebarTab did not match playlist/sound tab.");
 	}), Hooks.on("renderApplicationV2", (...e) => {
-		if (_(e)) {
-			b("renderApplicationV2 matched playlist/sound application.", S(e)), l(e);
+		if (g(e)) {
+			y("renderApplicationV2 matched playlist/sound application.", b(e)), c(e);
 			return;
 		}
-		p(e)?.id === "sidebar" && (b("renderApplicationV2 matched sidebar shell; scanning visible sidebar."), u());
+		f(e)?.id === "sidebar" && (y("renderApplicationV2 matched sidebar shell; scanning visible sidebar."), l());
 	}), Hooks.once("ready", () => {
-		b("ready hook fired; scanning visible sidebar and starting observer."), u(), d();
+		y("ready hook fired; scanning visible sidebar and starting observer."), l(), u();
 	});
 }
-function l(e) {
-	let n = p(e);
+function c(e) {
+	let n = f(e);
 	if (!n) {
-		b("No rendered HTMLElement found for button insertion.", S(e));
+		y("No rendered HTMLElement found for button insertion.", b(e));
 		return;
 	}
-	if (y(n)) {
-		b("Skipping sidebar navigation control.", C(n));
+	if (v(n)) {
+		y("Skipping sidebar navigation control.", x(n));
 		return;
 	}
 	if (n.querySelector(`[data-action="${i}"]`)) {
-		b("Button already exists in target root.", C(n));
+		y("Button already exists in target root.", x(n));
 		return;
 	}
 	let r = document.createElement("button");
@@ -75,86 +75,86 @@ function l(e) {
 	});
 	let o = document.createElement("div");
 	o.className = "nin-ghosts-music-browser-button-row", o.append(r);
-	let s = f(n);
-	s.prepend(o), b("Inserted Ghosts Browser button.", {
-		root: C(n),
-		target: C(s)
+	let s = d(n);
+	s.prepend(o), y("Inserted Ghosts Browser button.", {
+		root: x(n),
+		target: x(s)
 	});
 }
-function u() {
-	let e = /* @__PURE__ */ new Set(), t = g();
-	t && (b("Found playlist directory root from game.playlists.directory.", C(t)), e.add(t));
-	for (let t of s) {
+function l() {
+	let e = /* @__PURE__ */ new Set(), t = h();
+	t && (y("Found playlist directory root from game.playlists.directory.", x(t)), e.add(t));
+	for (let t of o) {
 		let n = document.querySelector(t);
 		if (n) {
-			if (y(n)) {
-				b("Visible sidebar selector matched navigation control; skipping.", {
-					root: C(n),
+			if (v(n)) {
+				y("Visible sidebar selector matched navigation control; skipping.", {
+					root: x(n),
 					selector: t
 				});
 				continue;
 			}
-			b("Visible sidebar selector matched.", {
-				root: C(n),
+			y("Visible sidebar selector matched.", {
+				root: x(n),
 				selector: t
 			}), e.add(n);
 		}
 	}
-	for (let t of e) l([t]);
-	e.size === 0 && b("No visible playlist/sound sidebar target matched.", {
-		checkedSelectors: s,
+	for (let t of e) c([t]);
+	e.size === 0 && y("No visible playlist/sound sidebar target matched.", {
+		checkedSelectors: o,
 		sidebarExists: !!document.querySelector("#sidebar")
 	});
 }
-function d() {
+function u() {
 	let e = document.querySelector("#sidebar") ?? document.body;
 	new MutationObserver(() => {
-		u();
+		l();
 	}).observe(e, {
 		childList: !0,
 		subtree: !0
-	}), b("Sidebar observer started.", C(e));
+	}), y("Sidebar observer started.", x(e));
 }
-function f(e) {
+function d(e) {
 	return e.querySelector(".directory-header") ?? e.querySelector(".sidebar-header") ?? e.querySelector(".directory-controls") ?? e.querySelector(".header-actions") ?? e.querySelector("header") ?? e;
 }
-function p(e) {
+function f(e) {
 	for (let t of e) {
-		let e = m(t);
+		let e = p(t);
 		if (e) return e;
 	}
 }
-function m(e) {
+function p(e) {
 	if (e instanceof HTMLElement) return e;
-	if (h(e)) {
+	if (m(e)) {
 		if (e.element instanceof HTMLElement) return e.element;
 		if (e[0] instanceof HTMLElement) return e[0];
 	}
 }
-function h(e) {
+function m(e) {
 	return typeof e == "object" && !!e;
 }
-function g() {
+function h() {
 	let e = game?.playlists;
-	return m(e?.directory?.element);
+	return p(e?.directory?.element);
 }
-function _(e) {
-	let t = p(e);
-	return t && v(t) ? !0 : e.some((e) => {
+function g(e) {
+	let t = f(e);
+	return t && _(t) ? !0 : e.some((e) => {
 		if (typeof e != "object" || !e) return !1;
 		let t = e.constructor.name.toLowerCase();
 		return t.includes("playlist") || t.includes("audio");
 	});
 }
-function v(e) {
+function _(e) {
 	let t = e.dataset.tab?.toLowerCase();
-	return y(e) ? !1 : e.id === "playlists" || t === "playlists" || t === "playlist" || e.classList.contains("playlists") || e.dataset.documentName === "Playlist" || e.matches(s.join(","));
+	return v(e) ? !1 : e.id === "playlists" || t === "playlists" || t === "playlist" || e.classList.contains("playlists") || e.dataset.documentName === "Playlist" || e.matches(o.join(","));
 }
-function y(e) {
+function v(e) {
 	return !!(e.closest("#sidebar-tabs, .sidebar-tabs, nav.tabs, menu.tabs") && (e.matches("a, button, [role='tab'], [data-tab]") || e.closest("a, button, [role='tab']")));
 }
-function b(e, t) {
-	if (x()) {
+function y(e, t) {
+	if (globalThis.ninGhostsDebug === !0) {
 		if (t === void 0) {
 			console.debug(`[NIN Ghosts] ${e}`);
 			return;
@@ -162,23 +162,20 @@ function b(e, t) {
 		console.debug(`[NIN Ghosts] ${e}`, t);
 	}
 }
-function x() {
-	return globalThis[o] === !0;
-}
-function S(e) {
+function b(e) {
 	return e.map((e) => {
-		if (e instanceof HTMLElement) return C(e);
-		if (h(e)) {
-			let t = m(e);
+		if (e instanceof HTMLElement) return x(e);
+		if (m(e)) {
+			let t = p(e);
 			return {
 				constructor: e.constructor.name,
-				element: t ? C(t) : void 0
+				element: t ? x(t) : void 0
 			};
 		}
 		return typeof e;
 	});
 }
-function C(e) {
+function x(e) {
 	return {
 		className: e.className,
 		id: e.id,
@@ -188,15 +185,15 @@ function C(e) {
 }
 //#endregion
 //#region src/module/hooks/register-module-hooks.ts
-function w() {
-	T(), Hooks.once("init", () => {
-		E("init"), c();
+function S() {
+	C(), Hooks.once("init", () => {
+		w("init"), s();
 	});
 }
-function T() {
+function C() {
 	globalThis.ninGhosts = n();
 }
-function E(e) {
+function w(e) {
 	try {
 		r();
 	} catch (t) {
@@ -205,7 +202,7 @@ function E(e) {
 }
 //#endregion
 //#region src/main.ts
-w();
+S();
 //#endregion
 
 //# sourceMappingURL=fvtt-nin-ghosts-annotated.mjs.map

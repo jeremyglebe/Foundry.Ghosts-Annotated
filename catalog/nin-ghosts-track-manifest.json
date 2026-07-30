@@ -1172,7 +1172,7 @@
       "album": "Ghosts V: Together",
       "trackNumber": "01",
       "officialTitle": "Letting Go While Holding On",
-      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-v-together/01_letting_go_while_holding_on.mp3",
+      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-v-together/01_letting_go_while_holding_on.opus",
       "verificationStatus": "verified",
       "verificationSources": [
         "https://www.nin.com/discography/",
@@ -1203,7 +1203,7 @@
       "album": "Ghosts V: Together",
       "trackNumber": "02",
       "officialTitle": "Together",
-      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-v-together/02_together.mp3",
+      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-v-together/02_together.opus",
       "verificationStatus": "verified",
       "verificationSources": [
         "https://www.nin.com/discography/",
@@ -1234,7 +1234,7 @@
       "album": "Ghosts V: Together",
       "trackNumber": "03",
       "officialTitle": "Out In The Open",
-      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-v-together/03_out_in_the_open.mp3",
+      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-v-together/03_out_in_the_open.opus",
       "verificationStatus": "verified",
       "verificationSources": [
         "https://www.nin.com/discography/",
@@ -1263,7 +1263,7 @@
       "album": "Ghosts V: Together",
       "trackNumber": "04",
       "officialTitle": "With Faith",
-      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-v-together/04_with_faith.mp3",
+      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-v-together/04_with_faith.opus",
       "verificationStatus": "verified",
       "verificationSources": [
         "https://www.nin.com/discography/",
@@ -1292,7 +1292,7 @@
       "album": "Ghosts V: Together",
       "trackNumber": "05",
       "officialTitle": "Apart",
-      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-v-together/05_apart.mp3",
+      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-v-together/05_apart.opus",
       "verificationStatus": "verified",
       "verificationSources": [
         "https://www.nin.com/discography/",
@@ -1321,7 +1321,7 @@
       "album": "Ghosts V: Together",
       "trackNumber": "06",
       "officialTitle": "Your Touch",
-      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-v-together/06_your_touch.mp3",
+      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-v-together/06_your_touch.opus",
       "verificationStatus": "verified",
       "verificationSources": [
         "https://www.nin.com/discography/",
@@ -1352,7 +1352,7 @@
       "album": "Ghosts V: Together",
       "trackNumber": "07",
       "officialTitle": "Hope We Can Again",
-      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-v-together/07_hope_we_can_again.mp3",
+      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-v-together/07_hope_we_can_again.opus",
       "verificationStatus": "verified",
       "verificationSources": [
         "https://www.nin.com/discography/",
@@ -1381,7 +1381,7 @@
       "album": "Ghosts V: Together",
       "trackNumber": "08",
       "officialTitle": "Still Right Here",
-      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-v-together/08_still_right_here.mp3",
+      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-v-together/08_still_right_here.opus",
       "verificationStatus": "verified",
       "verificationSources": [
         "https://www.nin.com/discography/",
@@ -1410,7 +1410,7 @@
       "album": "Ghosts VI: Locusts",
       "trackNumber": "01",
       "officialTitle": "The Cursed Clock",
-      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-vi-locusts/01_the_cursed_clock.mp3",
+      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-vi-locusts/01_the_cursed_clock.opus",
       "verificationStatus": "verified",
       "verificationSources": [
         "https://www.nin.com/discography/",
@@ -1440,7 +1440,7 @@
       "album": "Ghosts VI: Locusts",
       "trackNumber": "02",
       "officialTitle": "Around Every Corner",
-      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-vi-locusts/02_around_every_corner.mp3",
+      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-vi-locusts/02_around_every_corner.opus",
       "verificationStatus": "verified",
       "verificationSources": [
         "https://www.nin.com/discography/",
@@ -1471,7 +1471,7 @@
       "album": "Ghosts VI: Locusts",
       "trackNumber": "03",
       "officialTitle": "The Worriment Waltz",
-      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-vi-locusts/03_the_worriment_waltz.mp3",
+      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-vi-locusts/03_the_worriment_waltz.opus",
       "verificationStatus": "verified",
       "verificationSources": [
         "https://www.nin.com/discography/",
@@ -1502,7 +1502,7 @@
       "album": "Ghosts VI: Locusts",
       "trackNumber": "04",
       "officialTitle": "Run Like Hell",
-      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-vi-locusts/04_run_like_hell.mp3",
+      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-vi-locusts/04_run_like_hell.opus",
       "verificationStatus": "verified",
       "verificationSources": [
         "https://www.nin.com/discography/",
@@ -1532,7 +1532,7 @@
       "album": "Ghosts VI: Locusts",
       "trackNumber": "05",
       "officialTitle": "When It Happens (Don't Mind Me)",
-      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-vi-locusts/05_when_it_happens_dont_mind_me.mp3",
+      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-vi-locusts/05_when_it_happens_dont_mind_me.opus",
       "verificationStatus": "verified",
       "verificationSources": [
         "https://www.nin.com/discography/",
@@ -1561,7 +1561,7 @@
       "album": "Ghosts VI: Locusts",
       "trackNumber": "06",
       "officialTitle": "Another Crashed Car",
-      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-vi-locusts/06_another_crashed_car.mp3",
+      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-vi-locusts/06_another_crashed_car.opus",
       "verificationStatus": "verified",
       "verificationSources": [
         "https://www.nin.com/discography/",
@@ -1591,7 +1591,7 @@
       "album": "Ghosts VI: Locusts",
       "trackNumber": "07",
       "officialTitle": "Temp Fix",
-      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-vi-locusts/07_temp_fix.mp3",
+      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-vi-locusts/07_temp_fix.opus",
       "verificationStatus": "verified",
       "verificationSources": [
         "https://www.nin.com/discography/",
@@ -1617,7 +1617,7 @@
       "album": "Ghosts VI: Locusts",
       "trackNumber": "08",
       "officialTitle": "Trust Fades",
-      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-vi-locusts/08_trust_fades.mp3",
+      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-vi-locusts/08_trust_fades.opus",
       "verificationStatus": "verified",
       "verificationSources": [
         "https://www.nin.com/discography/",
@@ -1647,7 +1647,7 @@
       "album": "Ghosts VI: Locusts",
       "trackNumber": "09",
       "officialTitle": "A Really Bad Night",
-      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-vi-locusts/09_a_really_bad_night.mp3",
+      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-vi-locusts/09_a_really_bad_night.opus",
       "verificationStatus": "verified",
       "verificationSources": [
         "https://www.nin.com/discography/",
@@ -1676,7 +1676,7 @@
       "album": "Ghosts VI: Locusts",
       "trackNumber": "10",
       "officialTitle": "Your New Normal",
-      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-vi-locusts/10_your_new_normal.mp3",
+      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-vi-locusts/10_your_new_normal.opus",
       "verificationStatus": "verified",
       "verificationSources": [
         "https://www.nin.com/discography/",
@@ -1705,7 +1705,7 @@
       "album": "Ghosts VI: Locusts",
       "trackNumber": "11",
       "officialTitle": "Just Breathe",
-      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-vi-locusts/11_just_breathe.mp3",
+      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-vi-locusts/11_just_breathe.opus",
       "verificationStatus": "verified",
       "verificationSources": [
         "https://www.nin.com/discography/",
@@ -1734,7 +1734,7 @@
       "album": "Ghosts VI: Locusts",
       "trackNumber": "12",
       "officialTitle": "Right Behind You",
-      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-vi-locusts/12_right_behind_you.mp3",
+      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-vi-locusts/12_right_behind_you.opus",
       "verificationStatus": "verified",
       "verificationSources": [
         "https://www.nin.com/discography/",
@@ -1760,7 +1760,7 @@
       "album": "Ghosts VI: Locusts",
       "trackNumber": "13",
       "officialTitle": "Turn This Off Please",
-      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-vi-locusts/13_turn_this_off_please.mp3",
+      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-vi-locusts/13_turn_this_off_please.opus",
       "verificationStatus": "verified",
       "verificationSources": [
         "https://www.nin.com/discography/",
@@ -1789,7 +1789,7 @@
       "album": "Ghosts VI: Locusts",
       "trackNumber": "14",
       "officialTitle": "So Tired",
-      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-vi-locusts/14_so_tired.mp3",
+      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-vi-locusts/14_so_tired.opus",
       "verificationStatus": "verified",
       "verificationSources": [
         "https://www.nin.com/discography/",
@@ -1815,7 +1815,7 @@
       "album": "Ghosts VI: Locusts",
       "trackNumber": "15",
       "officialTitle": "Almost Dawn",
-      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-vi-locusts/15_almost_dawn.mp3",
+      "path": "/modules/fvtt-nin-ghosts-annotated/music/ghosts-vi-locusts/15_almost_dawn.opus",
       "verificationStatus": "verified",
       "verificationSources": [
         "https://www.nin.com/discography/",
