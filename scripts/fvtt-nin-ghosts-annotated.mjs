@@ -1,7 +1,7 @@
-import { t as e } from "../constants-BTCouAkl.js";
+import { t as e } from "../constants-m9fiLoN_.js";
 //#region src/module/apps/music-browser/open-music-browser-application.ts
 async function t() {
-	let { MusicBrowserApplication: e } = await import("../MusicBrowserApplication-CPfZj2eC.js");
+	let { MusicBrowserApplication: e } = await import("../MusicBrowserApplication-Do-OhQ3m.js");
 	await new e().render(!0);
 }
 //#endregion
@@ -12,7 +12,7 @@ function n() {
 			await t();
 		},
 		openPreviewNotice() {
-			console.log("NIN Ghosts RPG Annotations - Music Browser API is available.");
+			console.log("Drowsy's Annotated Browser of NIИ's Ghosts API is available.");
 		}
 	};
 }

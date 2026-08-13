@@ -1,0 +1,1 @@
+{"version":3,"file":"constants-m9fiLoN_.js","names":[],"sources":["../src/module/constants.ts"],"sourcesContent":["export const MODULE_ID = \"fvtt-nin-ghosts-annotated\";\nexport const MODULE_TITLE = \"Drowsy's Annotated Browser of NIИ's Ghosts\";\n"],"mappings":";AAAA,IAAa,IAAY,6BACZ,IAAe"}

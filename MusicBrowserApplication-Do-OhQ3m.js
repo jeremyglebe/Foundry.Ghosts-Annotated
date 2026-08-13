@@ -1,4 +1,4 @@
-import { n as e, t } from "./constants-BTCouAkl.js";
+import { n as e, t } from "./constants-m9fiLoN_.js";
 //#region node_modules/@vue/shared/dist/shared.esm-bundler.js
 // @__NO_SIDE_EFFECTS__
 function n(e) {
@@ -3284,4 +3284,4 @@ var { assign: Os } = Object, ks = class extends foundry.applications.api.Applica
 //#endregion
 export { As as MusicBrowserApplication };
 
-//# sourceMappingURL=MusicBrowserApplication-CPfZj2eC.js.map
+//# sourceMappingURL=MusicBrowserApplication-Do-OhQ3m.js.map

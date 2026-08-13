@@ -1,4 +1,4 @@
-# NIN Ghosts RPG Annotations - Music Browser
+# Drowsy's Annotated Browser of NIИ's Ghosts
 
 A Foundry VTT module that packages Nine Inch Nails Ghosts tracks and adds a searchable RPG-oriented
 music browser.
