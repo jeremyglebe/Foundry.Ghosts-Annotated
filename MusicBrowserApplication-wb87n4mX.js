@@ -2814,17 +2814,61 @@ async function vo(e) {
 	throw t instanceof Error ? t : /* @__PURE__ */ Error("Music browser track manifest could not be loaded.");
 }
 //#endregion
+//#region src/functions/music/group-music-browser-tags.ts
+var yo = [
+	"calm",
+	"melancholy",
+	"hopeful",
+	"eerie",
+	"bleak",
+	"tense",
+	"driving",
+	"menacing",
+	"frantic"
+], bo = [
+	"travel",
+	"wilderness",
+	"town",
+	"investigation",
+	"intrigue",
+	"stealth",
+	"dread",
+	"horror",
+	"ritual",
+	"combat",
+	"chase",
+	"aftermath",
+	"rest"
+];
+function xo(e) {
+	let t = new Set(e), n = new Set([...yo, ...bo]);
+	return [
+		{
+			label: "Mood",
+			tags: yo.filter((e) => t.has(e))
+		},
+		{
+			label: "Scene",
+			tags: bo.filter((e) => t.has(e))
+		},
+		{
+			label: "Other",
+			tags: [...t].filter((e) => !n.has(e)).sort((e, t) => e.localeCompare(t))
+		}
+	].filter((e) => e.tags.length > 0);
+}
+//#endregion
 //#region src/view/apps/music-browser/MusicTrackCard.vue?vue&type=script&setup=true&lang.ts
-var yo = { class: "tw:dui-card tw:dui-card-sm track-card" }, bo = { class: "tw:dui-card-body tw:gap-3" }, xo = { class: "tw:flex tw:items-start tw:justify-between tw:gap-3" }, So = { class: "tw:min-w-0" }, Co = { class: "track-catalog-line" }, wo = { class: "tw:dui-card-title tw:mt-1 tw:text-xl" }, To = ["aria-label", "disabled"], Eo = { "aria-hidden": "true" }, Do = { class: "track-cue" }, Oo = {
+var So = { class: "tw:dui-card tw:dui-card-sm track-card" }, Co = { class: "tw:dui-card-body tw:gap-3" }, wo = { class: "tw:flex tw:items-start tw:justify-between tw:gap-3" }, To = { class: "tw:min-w-0" }, Eo = { class: "track-catalog-line" }, Do = { class: "tw:dui-card-title tw:mt-1 tw:text-xl" }, Oo = ["aria-label", "disabled"], ko = { "aria-hidden": "true" }, Ao = { class: "track-cue" }, jo = {
 	class: "tw:flex tw:flex-wrap tw:gap-1.5",
-	"aria-label": "Scene tags"
-}, ko = ["aria-pressed", "onClick"], Ao = {
+	"aria-label": "Mood and scene tags"
+}, Mo = ["aria-pressed", "onClick"], No = {
 	class: "mood-grid",
 	"aria-label": "Track mood ratings"
-}, jo = ["aria-label"], Mo = {
+}, Po = ["aria-label"], Fo = {
 	class: "mood-dots",
 	"aria-hidden": "true"
-}, No = { class: "track-details" }, Po = { class: "tw:grid tw:gap-2 tw:pt-3" }, Fo = { class: "track-official-title" }, Io = { class: "tw:flex tw:flex-wrap tw:gap-1.5" }, Lo = { class: "tw:dui-badge tw:dui-badge-ghost tw:dui-badge-sm" }, Ro = { class: "tw:dui-badge tw:dui-badge-ghost tw:dui-badge-sm" }, zo = /* @__PURE__ */ Rn({
+}, Io = { class: "track-details" }, Lo = { class: "tw:grid tw:gap-2 tw:pt-3" }, Ro = { class: "track-official-title" }, zo = { class: "tw:flex tw:flex-wrap tw:gap-1.5" }, Bo = { class: "tw:dui-badge tw:dui-badge-ghost tw:dui-badge-sm" }, Vo = { class: "tw:dui-badge tw:dui-badge-ghost tw:dui-badge-sm" }, Ho = /* @__PURE__ */ Rn({
 	__name: "MusicTrackCard",
 	props: {
 		busy: { type: Boolean },
@@ -2854,68 +2898,72 @@ var yo = { class: "tw:dui-card tw:dui-card-sm track-card" }, bo = { class: "tw:d
 		function a(e) {
 			return e === "unreviewed" ? "Not reviewed" : `${e} confidence`;
 		}
-		return (t, n) => (J(), Y("article", yo, [X("div", bo, [
-			X("div", xo, [X("div", So, [X("p", Co, [
+		return (t, n) => (J(), Y("article", So, [X("div", Co, [
+			X("div", wo, [X("div", To, [X("p", Eo, [
 				X("span", null, k(e.track.album), 1),
 				n[1] ||= X("span", { "aria-hidden": "true" }, "·", -1),
 				X("span", null, "Track " + k(e.track.trackNumber), 1)
-			]), X("h2", wo, k(e.track.rpgTitle), 1)]), X("button", {
+			]), X("h2", Do, k(e.track.rpgTitle), 1)]), X("button", {
 				"aria-label": `Play ${e.track.rpgTitle}`,
 				class: "tw:dui-btn tw:dui-btn-sm tw:min-w-24 tw:shrink-0",
 				disabled: e.busy,
 				type: "button",
 				onClick: n[0] ||= (t) => r("play", e.track)
-			}, [X("span", Eo, k(e.busy ? "…" : "▶"), 1), Ri(" " + k(e.busy ? "Starting" : "Play"), 1)], 8, To)]),
-			X("p", Do, k(e.track.gmCue), 1),
-			X("div", Oo, [(J(!0), Y(K, null, lr(e.track.tags, (t) => (J(), Y("button", {
+			}, [X("span", ko, k(e.busy ? "…" : "▶"), 1), Ri(" " + k(e.busy ? "Starting" : "Play"), 1)], 8, Oo)]),
+			X("p", Ao, k(e.track.gmCue), 1),
+			X("div", jo, [(J(!0), Y(K, null, lr(e.track.tags, (t) => (J(), Y("button", {
 				key: `${e.track.id}-${t}`,
 				"aria-pressed": e.selectedTag === t,
 				class: _e(["tw:dui-badge tw:dui-badge-sm track-tag", { "tw:dui-badge-neutral": e.selectedTag === t }]),
 				type: "button",
 				onClick: (e) => r("selectTag", t)
-			}, k(t.replaceAll("-", " ")), 11, ko))), 128))]),
-			X("div", Ao, [(J(!0), Y(K, null, lr(i.value, (e) => (J(), Y("div", {
+			}, k(t.replaceAll("-", " ")), 11, Mo))), 128))]),
+			X("div", No, [(J(!0), Y(K, null, lr(i.value, (e) => (J(), Y("div", {
 				key: e.label,
 				class: "mood-meter",
 				"aria-label": `${e.label}: ${e.value ?? "not rated"} out of 5`
-			}, [X("span", null, k(e.label), 1), X("span", Mo, [(J(), Y(K, null, lr(5, (t) => X("i", {
+			}, [X("span", null, k(e.label), 1), X("span", Fo, [(J(), Y(K, null, lr(5, (t) => X("i", {
 				key: t,
 				class: _e({ "is-filled": e.value !== null && t <= e.value })
-			}, null, 2)), 64))])], 8, jo))), 128))]),
-			X("details", No, [n[3] ||= X("summary", null, "Why it fits & track details", -1), X("div", Po, [
+			}, null, 2)), 64))])], 8, Po))), 128))]),
+			X("details", Io, [n[3] ||= X("summary", null, "Why it fits & track details", -1), X("div", Lo, [
 				X("p", null, k(e.track.notes), 1),
-				X("p", Fo, [n[2] ||= X("span", null, "Official track", -1), X("strong", null, k(e.track.officialTitle), 1)]),
-				X("div", Io, [X("span", Lo, k(a(e.track.confidence)), 1), X("span", Ro, k(e.track.researchSources.length) + " research sources ", 1)])
+				X("p", Ro, [n[2] ||= X("span", null, "Official track", -1), X("strong", null, k(e.track.officialTitle), 1)]),
+				X("div", zo, [X("span", Bo, k(a(e.track.confidence)), 1), X("span", Vo, k(e.track.researchSources.length) + " research sources ", 1)])
 			])])
 		])]));
 	}
-}), Bo = { class: "music-browser" }, Vo = { class: "browser-header" }, Ho = { class: "tw:dui-input tw:dui-input-lg browser-search" }, Uo = {
+}), Uo = { class: "music-browser" }, Wo = { class: "browser-header" }, Go = { class: "tw:dui-input tw:dui-input-lg browser-search" }, Ko = {
 	class: "quick-filters",
 	"aria-label": "Quick scene filters"
-}, Wo = ["aria-pressed", "onClick"], Go = { class: "browser-filters" }, Ko = ["value"], qo = ["value"], Jo = ["disabled"], Yo = {
+}, qo = ["aria-pressed", "onClick"], Jo = { class: "browser-filters" }, Yo = ["value"], Xo = ["label"], Zo = ["value"], Qo = ["disabled"], $o = {
 	class: "browser-results",
 	"aria-labelledby": "results-heading"
-}, Xo = { class: "results-heading-row" }, Zo = { "aria-live": "polite" }, Qo = { key: 0 }, $o = {
+}, es = { class: "results-heading-row" }, ts = { "aria-live": "polite" }, ns = { key: 0 }, rs = {
 	key: 0,
 	class: "tw:dui-badge tw:dui-badge-neutral tw:gap-1"
-}, es = { "aria-hidden": "true" }, ts = {
+}, is = { "aria-hidden": "true" }, as = {
 	key: 1,
 	class: "tw:dui-alert",
 	role: "status"
-}, ns = {
+}, os = {
 	key: 2,
 	class: "track-grid"
-}, rs = {
+}, ss = {
 	key: 3,
 	class: "empty-results"
-}, is = /* @__PURE__ */ Rn({
+}, cs = /* @__PURE__ */ Rn({
 	__name: "MusicBrowserApp",
 	props: { onPlayTrack: { type: Function } },
 	setup(e) {
 		let t = e, n = [
 			{
-				label: "Explore",
-				value: "exploration"
+				label: "Travel",
+				value: "travel"
+			},
+			{
+				label: "Town",
+				value: "town"
 			},
 			{
 				label: "Investigate",
@@ -2926,27 +2974,31 @@ var yo = { class: "tw:dui-card tw:dui-card-sm track-card" }, bo = { class: "tw:d
 				value: "stealth"
 			},
 			{
-				label: "Fight",
-				value: "combat"
+				label: "Dread",
+				value: "dread"
 			},
 			{
 				label: "Horror",
 				value: "horror"
 			},
 			{
-				label: "Recover",
-				value: "recovery"
+				label: "Fight",
+				value: "combat"
 			},
 			{
-				label: "Travel",
-				value: "travel"
+				label: "Aftermath",
+				value: "aftermath"
+			},
+			{
+				label: "Rest",
+				value: "rest"
 			}
 		], r = /* @__PURE__ */ Ut(""), i = /* @__PURE__ */ Ut(""), a = /* @__PURE__ */ Ut(""), o = /* @__PURE__ */ Ut("Loading the track catalog…"), s = /* @__PURE__ */ Ut(null), c = /* @__PURE__ */ Ut(""), l = /* @__PURE__ */ Ut(""), u = /* @__PURE__ */ Ut([]), d = la(() => Array.from(new Set(u.value.map((e) => e.album))).sort((e, t) => e.localeCompare(t))), f = la(() => uo(u.value, {
 			album: r.value,
 			energy: a.value,
 			query: c.value,
 			tag: l.value
-		})), p = la(() => !!(r.value || a.value || c.value || l.value)), m = la(() => Array.from(new Set(u.value.flatMap((e) => e.tags))).sort((e, t) => e.localeCompare(t)));
+		})), p = la(() => !!(r.value || a.value || c.value || l.value)), m = la(() => xo(u.value.flatMap((e) => e.tags)));
 		$n(async () => {
 			try {
 				u.value = await go(), o.value = "";
@@ -2984,11 +3036,11 @@ var yo = { class: "tw:dui-card tw:dui-card-sm track-card" }, bo = { class: "tw:d
 				i.value = "";
 			}
 		}
-		return (e, t) => (J(), Y("main", Bo, [X("header", Vo, [
+		return (e, t) => (J(), Y("main", Uo, [X("header", Wo, [
 			t[14] ||= X("p", { class: "browser-kicker" }, "NIN Ghosts · GM score finder", -1),
 			t[15] ||= X("h1", null, "Find the right track for the scene.", -1),
 			t[16] ||= X("p", { class: "browser-intro" }, " Describe the moment, pick a scene type, or dial in the energy. The catalog is curated for play at the table. ", -1),
-			X("label", Ho, [
+			X("label", Go, [
 				t[6] ||= X("span", {
 					"aria-hidden": "true",
 					class: "tw:text-xl"
@@ -3008,21 +3060,21 @@ var yo = { class: "tw:dui-card tw:dui-card-sm track-card" }, bo = { class: "tw:d
 					onClick: t[1] ||= (e) => c.value = ""
 				}, " × ")) : zi("", !0)
 			]),
-			X("div", Uo, [t[7] ||= X("span", null, "Quick scenes", -1), (J(), Y(K, null, lr(n, (e) => X("button", {
+			X("div", Ko, [t[7] ||= X("span", null, "Quick scenes", -1), (J(), Y(K, null, lr(n, (e) => X("button", {
 				key: e.value,
 				"aria-pressed": l.value === e.value,
 				class: _e(["tw:dui-btn tw:dui-btn-xs", { "tw:dui-btn-neutral": l.value === e.value }]),
 				type: "button",
 				onClick: (t) => g(e.value)
-			}, k(e.label), 11, Wo)), 64))]),
-			X("div", Go, [
+			}, k(e.label), 11, qo)), 64))]),
+			X("div", Jo, [
 				X("label", null, [t[9] ||= X("span", null, "Album", -1), wn(X("select", {
 					"onUpdate:modelValue": t[2] ||= (e) => r.value = e,
 					class: "tw:dui-select tw:dui-select-sm tw:w-full"
 				}, [t[8] ||= X("option", { value: "" }, "Every album", -1), (J(!0), Y(K, null, lr(d.value, (e) => (J(), Y("option", {
 					key: e,
 					value: e
-				}, k(e), 9, Ko))), 128))], 512), [[to, r.value]])]),
+				}, k(e), 9, Yo))), 128))], 512), [[to, r.value]])]),
 				X("label", null, [t[11] ||= X("span", null, "Energy", -1), wn(X("select", {
 					"onUpdate:modelValue": t[3] ||= (e) => a.value = e,
 					class: "tw:dui-select tw:dui-select-sm tw:w-full"
@@ -3032,35 +3084,38 @@ var yo = { class: "tw:dui-card tw:dui-card-sm track-card" }, bo = { class: "tw:d
 					X("option", { value: "medium" }, "Medium · 3", -1),
 					X("option", { value: "high" }, "High · 4–5", -1)
 				]], 512), [[to, a.value]])]),
-				X("label", null, [t[13] ||= X("span", null, "Scene tag", -1), wn(X("select", {
+				X("label", null, [t[13] ||= X("span", null, "Mood or scene", -1), wn(X("select", {
 					"onUpdate:modelValue": t[4] ||= (e) => l.value = e,
 					class: "tw:dui-select tw:dui-select-sm tw:w-full"
-				}, [t[12] ||= X("option", { value: "" }, "Any scene", -1), (J(!0), Y(K, null, lr(m.value, (e) => (J(), Y("option", {
+				}, [t[12] ||= X("option", { value: "" }, "Any mood or scene", -1), (J(!0), Y(K, null, lr(m.value, (e) => (J(), Y("optgroup", {
+					key: e.label,
+					label: e.label
+				}, [(J(!0), Y(K, null, lr(e.tags, (e) => (J(), Y("option", {
 					key: e,
 					value: e
-				}, k(e.replaceAll("-", " ")), 9, qo))), 128))], 512), [[to, l.value]])]),
+				}, k(e.replaceAll("-", " ")), 9, Zo))), 128))], 8, Xo))), 128))], 512), [[to, l.value]])]),
 				X("button", {
 					class: "tw:dui-btn tw:dui-btn-sm tw:self-end",
 					disabled: !p.value,
 					type: "button",
 					onClick: h
-				}, " Reset ", 8, Jo)
+				}, " Reset ", 8, Qo)
 			])
-		]), X("section", Yo, [
-			X("div", Xo, [X("div", null, [t[17] ||= X("h2", { id: "results-heading" }, "Tracks for your scene", -1), X("p", Zo, [Ri(k(f.value.length) + " " + k(f.value.length === 1 ? "match" : "matches") + " ", 1), p.value ? (J(), Y("span", Qo, " in the 59-track library")) : zi("", !0)])]), l.value ? (J(), Y("p", $o, [Ri(k(l.value.replaceAll("-", " ")) + " ", 1), X("button", {
-				"aria-label": "Remove scene tag filter",
+		]), X("section", $o, [
+			X("div", es, [X("div", null, [t[17] ||= X("h2", { id: "results-heading" }, "Tracks for your scene", -1), X("p", ts, [Ri(k(f.value.length) + " " + k(f.value.length === 1 ? "match" : "matches") + " ", 1), p.value ? (J(), Y("span", ns, " in the 59-track library")) : zi("", !0)])]), l.value ? (J(), Y("p", rs, [Ri(k(l.value.replaceAll("-", " ")) + " ", 1), X("button", {
+				"aria-label": "Remove tag filter",
 				type: "button",
 				onClick: t[5] ||= (e) => l.value = ""
-			}, " × ")])) : zi("", !0)]),
+			}, "×")])) : zi("", !0)]),
 			s.value ? (J(), Y("div", {
 				key: 0,
 				class: _e(["tw:dui-alert tw:mb-3", s.value.ok ? "tw:dui-alert-success" : "tw:dui-alert-error"]),
 				role: "status"
-			}, [X("span", es, k(s.value.ok ? "▶" : "!"), 1), X("span", null, k(s.value.message), 1)], 2)) : zi("", !0),
-			o.value ? (J(), Y("div", ts, [t[18] ||= X("span", {
+			}, [X("span", is, k(s.value.ok ? "▶" : "!"), 1), X("span", null, k(s.value.message), 1)], 2)) : zi("", !0),
+			o.value ? (J(), Y("div", as, [t[18] ||= X("span", {
 				class: "tw:dui-loading tw:dui-loading-sm tw:dui-loading-spinner",
 				"aria-hidden": "true"
-			}, null, -1), X("span", null, k(o.value), 1)])) : f.value.length ? (J(), Y("div", ns, [(J(!0), Y(K, null, lr(f.value, (e) => (J(), ki(zo, {
+			}, null, -1), X("span", null, k(o.value), 1)])) : f.value.length ? (J(), Y("div", os, [(J(!0), Y(K, null, lr(f.value, (e) => (J(), ki(Ho, {
 				key: e.id,
 				busy: i.value === e.id,
 				"selected-tag": l.value,
@@ -3071,7 +3126,7 @@ var yo = { class: "tw:dui-card tw:dui-card-sm track-card" }, bo = { class: "tw:d
 				"busy",
 				"selected-tag",
 				"track"
-			]))), 128))])) : (J(), Y("div", rs, [
+			]))), 128))])) : (J(), Y("div", ss, [
 				t[19] ||= X("span", { "aria-hidden": "true" }, "⌕", -1),
 				t[20] ||= X("h3", null, "No tracks fit all of those choices.", -1),
 				t[21] ||= X("p", null, "Try fewer words, a different energy level, or clear the scene tag.", -1),
@@ -3083,9 +3138,9 @@ var yo = { class: "tw:dui-card tw:dui-card-sm track-card" }, bo = { class: "tw:d
 			]))
 		])]));
 	}
-}), as = "NIN Ghosts RPG Browser";
-async function os(e) {
-	let t = await ss(), n = await cs(t, e);
+}), ls = "NIN Ghosts RPG Browser";
+async function us(e) {
+	let t = await ds(), n = await fs(t, e);
 	return t.playSound ? (await t.playSound(n), {
 		ok: !0,
 		message: `Playing ${e.title}.`
@@ -3097,8 +3152,8 @@ async function os(e) {
 		message: "Foundry did not expose a playlist playback method for this track."
 	};
 }
-async function ss() {
-	let e = ls(as);
+async function ds() {
+	let e = ps(ls);
 	if (e) return e;
 	if (typeof Playlist > "u") throw Error("Foundry Playlist document constructor is unavailable.");
 	return Playlist.create({
@@ -3106,13 +3161,13 @@ async function ss() {
 		description: "Tracks launched from the NIN Ghosts RPG music browser.",
 		flags: { [t]: { browserPlaylist: !0 } },
 		mode: 0,
-		name: as,
+		name: ls,
 		playing: !1,
 		sounds: []
 	});
 }
-async function cs(e, n) {
-	let r = ds(e).find((e) => e.flags?.["fvtt-nin-ghosts-annotated"]?.trackId === n.id || e.path === n.path);
+async function fs(e, n) {
+	let r = hs(e).find((e) => e.flags?.["fvtt-nin-ghosts-annotated"]?.trackId === n.id || e.path === n.path);
 	if (r) return r;
 	if (!e.createEmbeddedDocuments) throw Error("Foundry did not expose playlist sound creation for the browser playlist.");
 	let [i] = await e.createEmbeddedDocuments("PlaylistSound", [{
@@ -3130,37 +3185,37 @@ async function cs(e, n) {
 	if (!i) throw Error("Foundry did not return the created playlist sound.");
 	return i;
 }
-function ls(e) {
+function ps(e) {
 	let t = game?.playlists;
-	if (t) return t.getName?.(e) ?? us().find((t) => t.name === e);
+	if (t) return t.getName?.(e) ?? ms().find((t) => t.name === e);
 }
-function us() {
+function ms() {
 	let e = game?.playlists;
 	return e ? e.contents ? e.contents : e.values ? Array.from(e.values()) : [] : [];
 }
-function ds(e) {
+function hs(e) {
 	let t = e.sounds;
 	return t ? Array.isArray(t) ? t : t.contents ? t.contents : t.values ? Array.from(t.values()) : [] : [];
 }
 //#endregion
 //#region node_modules/pinia/dist/pinia.mjs
-var fs = typeof window < "u", ps = Symbol(), ms;
+var gs = typeof window < "u", _s = Symbol(), vs;
 (function(e) {
 	e.direct = "direct", e.patchObject = "patch object", e.patchFunction = "patch function";
-})(ms ||= {});
-var hs = typeof window == "object" && window.window === window ? window : typeof self == "object" && self.self === self ? self : typeof global == "object" && global.global === global ? global : typeof globalThis == "object" ? globalThis : { HTMLElement: null };
-function gs(e, { autoBom: t = !1 } = {}) {
+})(vs ||= {});
+var ys = typeof window == "object" && window.window === window ? window : typeof self == "object" && self.self === self ? self : typeof global == "object" && global.global === global ? global : typeof globalThis == "object" ? globalThis : { HTMLElement: null };
+function bs(e, { autoBom: t = !1 } = {}) {
 	return t && /^\s*(?:text\/\S*|application\/xml|\S*\/\S*\+xml)\s*;.*charset\s*=\s*utf-8/i.test(e.type) ? new Blob(["﻿", e], { type: e.type }) : e;
 }
-function _s(e, t, n) {
+function xs(e, t, n) {
 	let r = new XMLHttpRequest();
 	r.open("GET", e), r.responseType = "blob", r.onload = function() {
-		Ss(r.response, t, n);
+		Es(r.response, t, n);
 	}, r.onerror = function() {
 		console.error("could not download file");
 	}, r.send();
 }
-function vs(e) {
+function Ss(e) {
 	let t = new XMLHttpRequest();
 	t.open("HEAD", e, !1);
 	try {
@@ -3168,7 +3223,7 @@ function vs(e) {
 	} catch {}
 	return t.status >= 200 && t.status <= 299;
 }
-function ys(e) {
+function Cs(e) {
 	try {
 		e.dispatchEvent(new MouseEvent("click"));
 	} catch {
@@ -3191,29 +3246,29 @@ function ys(e) {
 		e.dispatchEvent(t);
 	}
 }
-var bs = typeof navigator == "object" ? navigator : { userAgent: "" }, xs = /Macintosh/.test(bs.userAgent) && /AppleWebKit/.test(bs.userAgent) && !/Safari/.test(bs.userAgent), Ss = fs ? typeof HTMLAnchorElement < "u" && "download" in HTMLAnchorElement.prototype && !xs ? Cs : "msSaveOrOpenBlob" in bs ? ws : Ts : () => {};
-function Cs(e, t = "download", n) {
+var ws = typeof navigator == "object" ? navigator : { userAgent: "" }, Ts = /Macintosh/.test(ws.userAgent) && /AppleWebKit/.test(ws.userAgent) && !/Safari/.test(ws.userAgent), Es = gs ? typeof HTMLAnchorElement < "u" && "download" in HTMLAnchorElement.prototype && !Ts ? Ds : "msSaveOrOpenBlob" in ws ? Os : ks : () => {};
+function Ds(e, t = "download", n) {
 	let r = document.createElement("a");
-	r.download = t, r.rel = "noopener", typeof e == "string" ? (r.href = e, r.origin === location.origin ? ys(r) : vs(r.href) ? _s(e, t, n) : (r.target = "_blank", ys(r))) : (r.href = URL.createObjectURL(e), setTimeout(function() {
+	r.download = t, r.rel = "noopener", typeof e == "string" ? (r.href = e, r.origin === location.origin ? Cs(r) : Ss(r.href) ? xs(e, t, n) : (r.target = "_blank", Cs(r))) : (r.href = URL.createObjectURL(e), setTimeout(function() {
 		URL.revokeObjectURL(r.href);
 	}, 4e4), setTimeout(function() {
-		ys(r);
+		Cs(r);
 	}, 0));
 }
-function ws(e, t = "download", n) {
-	if (typeof e == "string") if (vs(e)) _s(e, t, n);
+function Os(e, t = "download", n) {
+	if (typeof e == "string") if (Ss(e)) xs(e, t, n);
 	else {
 		let t = document.createElement("a");
 		t.href = e, t.target = "_blank", setTimeout(function() {
-			ys(t);
+			Cs(t);
 		});
 	}
-	else navigator.msSaveOrOpenBlob(gs(e, n), t);
+	else navigator.msSaveOrOpenBlob(bs(e, n), t);
 }
-function Ts(e, t, n, r) {
-	if (r ||= open("", "_blank"), r && (r.document.title = r.document.body.innerText = "downloading..."), typeof e == "string") return _s(e, t, n);
-	let i = e.type === "application/octet-stream", a = /constructor/i.test(String(hs.HTMLElement)) || "safari" in hs, o = /CriOS\/[\d]+/.test(navigator.userAgent);
-	if ((o || i && a || xs) && typeof FileReader < "u") {
+function ks(e, t, n, r) {
+	if (r ||= open("", "_blank"), r && (r.document.title = r.document.body.innerText = "downloading..."), typeof e == "string") return xs(e, t, n);
+	let i = e.type === "application/octet-stream", a = /constructor/i.test(String(ys.HTMLElement)) || "safari" in ys, o = /CriOS\/[\d]+/.test(navigator.userAgent);
+	if ((o || i && a || Ts) && typeof FileReader < "u") {
 		let t = new FileReader();
 		t.onloadend = function() {
 			let e = t.result;
@@ -3227,11 +3282,11 @@ function Ts(e, t, n, r) {
 		}, 4e4);
 	}
 }
-var { assign: Es } = Object;
-function Ds() {
+var { assign: As } = Object;
+function js() {
 	let e = Oe(!0), t = e.run(() => /* @__PURE__ */ Ut({})), n = [], r = [], i = Vt({
 		install(e) {
-			i._a = e, e.provide(ps, i), e.config.globalProperties.$pinia = i, r.forEach((e) => n.push(e)), r = [];
+			i._a = e, e.provide(_s, i), e.config.globalProperties.$pinia = i, r.forEach((e) => n.push(e)), r = [];
 		},
 		use(e) {
 			return this._a ? n.push(e) : r.push(e), this;
@@ -3244,7 +3299,7 @@ function Ds() {
 	});
 	return i;
 }
-var { assign: Os } = Object, ks = class extends foundry.applications.api.ApplicationV2 {
+var { assign: Ms } = Object, Ns = class extends foundry.applications.api.ApplicationV2 {
 	#e;
 	getVueProps() {}
 	async _renderHTML(e, t) {
@@ -3252,7 +3307,7 @@ var { assign: Os } = Object, ks = class extends foundry.applications.api.Applica
 		return n.classList.add("fvtt-nin-ghosts-annotated-root"), n.dataset.theme = "fvtt-nin-ghosts-annotated", n;
 	}
 	_replaceHTML(e, t, n) {
-		this.unmountVue(), t.classList.add("fvtt-nin-ghosts-annotated-app"), t.replaceChildren(e), this.#e = so(this.getVueComponent(), this.getVueProps() ?? {}), this.#e.use(Ds()), this.#e.mount(e);
+		this.unmountVue(), t.classList.add("fvtt-nin-ghosts-annotated-app"), t.replaceChildren(e), this.#e = so(this.getVueComponent(), this.getVueProps() ?? {}), this.#e.use(js()), this.#e.mount(e);
 	}
 	async _preClose(e) {
 		this.unmountVue(), await super._preClose(e);
@@ -3260,7 +3315,7 @@ var { assign: Os } = Object, ks = class extends foundry.applications.api.Applica
 	unmountVue() {
 		this.#e?.unmount(), this.#e = void 0;
 	}
-}, As = class extends ks {
+}, Ps = class extends Ns {
 	static DEFAULT_OPTIONS = {
 		id: `${t}-music-browser`,
 		tag: "section",
@@ -3275,13 +3330,13 @@ var { assign: Os } = Object, ks = class extends foundry.applications.api.Applica
 		}
 	};
 	getVueComponent() {
-		return is;
+		return cs;
 	}
 	getVueProps() {
-		return { onPlayTrack: async (e) => os(e) };
+		return { onPlayTrack: async (e) => us(e) };
 	}
 };
 //#endregion
-export { As as MusicBrowserApplication };
+export { Ps as MusicBrowserApplication };
 
-//# sourceMappingURL=MusicBrowserApplication-Do-OhQ3m.js.map
+//# sourceMappingURL=MusicBrowserApplication-wb87n4mX.js.map

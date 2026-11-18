@@ -2,12 +2,40 @@
   "title": "Drowsy's Annotated Browser of NIИ's Ghosts Track Manifest",
   "schemaVersion": 1,
   "notes": [
-    "This manifest contains verified track identity and draft RPG annotations.",
-    "Tags are intentionally for TTRPG use and should be backed by research notes: scene type, table function, environment, or pressure level.",
-    "Do not use instrument or genre metadata as browser tags unless a future UI explicitly separates musical metadata from RPG-use tags.",
-    "Draft annotations are sourced from docs/research/ghosts-track-research-notes.md and should remain editable after direct table-use testing.",
-    "Use confidence and annotationStatus to distinguish strong source-backed cues from low-confidence editorial suggestions."
+    "This manifest contains verified track identity and draft RPG annotations for grim fantasy play.",
+    "Each track's tags are one or two moods followed by one to three scene uses, all drawn from tagVocabulary. Add new tags to tagVocabulary first so the browser can group them.",
+    "Annotations are based on NIN Wiki and review descriptions of each track plus measured audio features (loudness over time, distortion, brightness, pulse) recorded in docs/research/ghosts-audio-measurements.md. Booklet photography is no longer used to name tracks.",
+    "gmCue carries timing notes and heads-ups (spoken samples, loud endings, silent tails) that matter at the table.",
+    "Use confidence to separate strong source-backed calls from editorial ones; annotationStatus stays draft until table-tested."
   ],
+  "tagVocabulary": {
+    "moods": [
+      "calm",
+      "melancholy",
+      "hopeful",
+      "eerie",
+      "bleak",
+      "tense",
+      "driving",
+      "menacing",
+      "frantic"
+    ],
+    "scenes": [
+      "travel",
+      "wilderness",
+      "town",
+      "investigation",
+      "intrigue",
+      "stealth",
+      "dread",
+      "horror",
+      "ritual",
+      "combat",
+      "chase",
+      "aftermath",
+      "rest"
+    ]
+  },
   "ratingScale": {
     "min": 1,
     "max": 5
@@ -39,24 +67,23 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Weather",
-      "tags": ["exploration", "downtime", "weather", "calm"],
+      "rpgTitle": "Grey Morning",
+      "tags": ["melancholy", "calm", "rest", "travel", "aftermath"],
       "ratings": {
         "intensity": 1,
         "darkness": 2,
-        "tension": 2,
-        "weirdness": 2
+        "tension": 1,
+        "weirdness": 1
       },
-      "gmCue": "Use for a quiet opening, changing weather, or a wide exterior before trouble arrives.",
+      "gmCue": "A quiet session opener, a campfire after a hard day, or the long walk away from a loss. Sparse piano over a soft drone; nothing in it pulls focus.",
       "annotationStatus": "draft",
-      "confidence": "medium",
+      "confidence": "high",
       "researchSources": [
         "https://www.nin.wiki/1_Ghosts_I",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/"
       ],
-      "notes": "Drafted from NIN Wiki piano/drone notes plus the booklet image of clouded sky over a treeline."
+      "notes": "NIN Wiki: simple piano melody over droning synths, 60 BPM. Measured among the quietest and least noisy tracks, with a flat level throughout."
     },
     {
       "id": "ghosts-i-02",
@@ -70,25 +97,24 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Containment",
-      "tags": ["investigation", "containment", "weird", "quiet"],
+      "rpgTitle": "Empty House",
+      "tags": ["eerie", "melancholy", "investigation", "dread"],
       "ratings": {
         "intensity": 1,
-        "darkness": 2,
+        "darkness": 3,
         "tension": 2,
-        "weirdness": 3
+        "weirdness": 2
       },
-      "gmCue": "Use for a sealed room, strange object, or cautious inspection of something held in glass.",
+      "gmCue": "Searching an abandoned house, a cold shrine, or the first hint that something is wrong. Quiet 3/4 piano in reverb; the last 20 seconds fade to silence.",
       "annotationStatus": "draft",
-      "confidence": "medium",
+      "confidence": "high",
       "researchSources": [
         "https://www.nin.wiki/2_Ghosts_I",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/",
         "https://popdose.com/listening-booth-nine-inch-nails-ghosts-i-iv/"
       ],
-      "notes": "Supported by quiet piano/drone descriptions, Popdose selecting it as representative, and green-lit glass imagery in the booklet."
+      "notes": "NIN Wiki: drone carried over from track 01, quiet 3/4 piano, heavy reverb at the close. Measured quiet, swelling gently in the middle, near-silent final 20 s."
     },
     {
       "id": "ghosts-i-03",
@@ -102,24 +128,23 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Repair",
-      "tags": ["downtime", "repair", "work", "suspense"],
+      "rpgTitle": "The Hunt",
+      "tags": ["tense", "driving", "wilderness", "travel", "chase"],
       "ratings": {
         "intensity": 3,
-        "darkness": 2,
+        "darkness": 3,
         "tension": 3,
         "weirdness": 3
       },
-      "gmCue": "Use while characters patch equipment, force a door, or work under mounting pressure.",
+      "gmCue": "Tracking something through the woods, a hurried march, or a hunt that hasn't found its quarry yet. A steady percussive groove with breathing-like sounds; driving rather than explosive.",
       "annotationStatus": "draft",
       "confidence": "medium",
       "researchSources": [
         "https://www.nin.wiki/3_Ghosts_I",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/"
       ],
-      "notes": "NIN Wiki notes percussive/staccato movement; booklet image shows an improvised taped fixture and cable."
+      "notes": "NIN Wiki: 135 BPM percussive beat, staccato guitar, bass-led melody, breathing sounds, dervish-chant resemblance. Measured loud and rhythmically regular from start to near the end."
     },
     {
       "id": "ghosts-i-04",
@@ -133,24 +158,23 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Workshop",
-      "tags": ["workshop", "technology", "escalation", "suspense"],
+      "rpgTitle": "Brawl",
+      "tags": ["menacing", "frantic", "combat"],
       "ratings": {
-        "intensity": 3,
-        "darkness": 3,
-        "tension": 3,
+        "intensity": 5,
+        "darkness": 4,
+        "tension": 4,
         "weirdness": 2
       },
-      "gmCue": "Use for a dirty workroom, engine bay, or scene where quiet work starts getting rough.",
+      "gmCue": "A short, ugly fight: a tavern brawl turning lethal, beastmen breaking cover. Distorted bass and drums hit about 10 seconds in. The last 20 seconds are effects that lead into track 05, so cut early.",
       "annotationStatus": "draft",
-      "confidence": "medium",
+      "confidence": "high",
       "researchSources": [
         "https://www.nin.wiki/4_Ghosts_I",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/"
       ],
-      "notes": "Draft combines the track build from strummed guitar into distortion/drums with the recording-floor gear image."
+      "notes": "NIN Wiki: strumming overtaken by distorted bass, drums and piercing guitar. Measured among the loudest and most distorted tracks; quiet first ~10 s and last ~20 s."
     },
     {
       "id": "ghosts-i-05",
@@ -164,24 +188,23 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Roadside",
-      "tags": ["exploration", "travel", "lonely", "suspense"],
+      "rpgTitle": "Bare Fields",
+      "tags": ["melancholy", "bleak", "aftermath", "travel"],
       "ratings": {
         "intensity": 2,
         "darkness": 3,
-        "tension": 3,
-        "weirdness": 3
+        "tension": 2,
+        "weirdness": 2
       },
-      "gmCue": "Use for a lonely roadside stop, sparse landscape, or uneasy pause between journeys.",
+      "gmCue": "A burned farmstead, a road through dead winter country, or counting the cost. A low buzz keeps it uneasy; it swells a little near the two-minute mark.",
       "annotationStatus": "draft",
       "confidence": "medium",
       "researchSources": [
         "https://www.nin.wiki/5_Ghosts_I",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/"
       ],
-      "notes": "NIN Wiki notes buzzing, breathing-like texture, guitar, and piano; booklet shows a bare low landscape."
+      "notes": "NIN Wiki: humming/buzzing texture, guitar and piano melody, descending piano, breathing sounds. Measured quiet with one swell around 1:50 to 2:20."
     },
     {
       "id": "ghosts-i-06",
@@ -195,24 +218,23 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Control Panel",
-      "tags": ["technology", "calm", "low-tension", "mystery"],
+      "rpgTitle": "Lamplight Study",
+      "tags": ["calm", "eerie", "investigation", "rest"],
       "ratings": {
         "intensity": 1,
         "darkness": 2,
-        "tension": 2,
-        "weirdness": 2
+        "tension": 1,
+        "weirdness": 3
       },
-      "gmCue": "Use for a quiet control room, blinking panel, or technical task with low immediate danger.",
+      "gmCue": "Poring over old tomes, a quiet night watch, or a temple of Morr at rest. A hypnotic vibraphone loop that sits well under a long scene.",
       "annotationStatus": "draft",
-      "confidence": "low",
+      "confidence": "high",
       "researchSources": [
         "https://www.nin.wiki/6_Ghosts_I",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/"
       ],
-      "notes": "The label leans on visual hardware/lights plus NIN Wiki repeating vibraphone and soft drones; needs listening confirmation."
+      "notes": "NIN Wiki: echoing vibraphone pattern repeated throughout over soft drones. Measured the cleanest (least noisy) track in Ghosts I-IV with a very steady level."
     },
     {
       "id": "ghosts-i-07",
@@ -226,24 +248,23 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Workbench",
-      "tags": ["work", "technology", "suspense", "short-cue"],
+      "rpgTitle": "Scramble",
+      "tags": ["tense", "frantic", "chase", "combat"],
       "ratings": {
-        "intensity": 3,
+        "intensity": 4,
         "darkness": 3,
-        "tension": 3,
+        "tension": 4,
         "weirdness": 3
       },
-      "gmCue": "Use for a tense hands-on task, hurried assembly, or short burst of focused work.",
+      "gmCue": "A quick chase through alleys or a scrappy skirmish. Only two minutes and it stops abruptly, so loop it or follow it with another track.",
       "annotationStatus": "draft",
       "confidence": "medium",
       "researchSources": [
         "https://www.nin.wiki/7_Ghosts_I",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/"
       ],
-      "notes": "Effected drums, staccato synth, distorted guitar, and abrupt ending support a compact work-pressure cue."
+      "notes": "NIN Wiki: effected drum beat, staccato synth, distorted guitars, abrupt ending. Measured loud and flat for its whole 2:01. The staccato synth can sound modern."
     },
     {
       "id": "ghosts-i-08",
@@ -257,24 +278,23 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Device",
-      "tags": ["technology", "escalation", "danger", "suspense"],
+      "rpgTitle": "Iron Tread",
+      "tags": ["menacing", "combat", "dread"],
       "ratings": {
         "intensity": 4,
-        "darkness": 3,
+        "darkness": 4,
         "tension": 4,
         "weirdness": 2
       },
-      "gmCue": "Use when a machine starts, a device is activated, or a scene gains heavy momentum.",
+      "gmCue": "Something big and slow is coming: an armored column, a troll at the bridge, a fight against one heavy foe. Slow, crushing and loud the whole way through.",
       "annotationStatus": "draft",
-      "confidence": "medium",
+      "confidence": "high",
       "researchSources": [
         "https://www.nin.wiki/8_Ghosts_I",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/"
       ],
-      "notes": "NIN Wiki describes slow energetic drums and noisy guitar bassline; booklet shows audio/effects hardware being adjusted."
+      "notes": "NIN Wiki: slow (56 BPM) but energetic drums, noisy guitar bassline, layered guitars. Measured the loudest median level in Ghosts I-IV with almost no dynamic range."
     },
     {
       "id": "ghosts-i-09",
@@ -288,24 +308,23 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Transit",
-      "tags": ["travel", "urban", "suspense", "uneasy"],
+      "rpgTitle": "Market Rumors",
+      "tags": ["eerie", "tense", "town", "investigation"],
       "ratings": {
         "intensity": 2,
         "darkness": 3,
         "tension": 3,
         "weirdness": 3
       },
-      "gmCue": "Use for moving through a station, crowd, or public interior while something feels wrong.",
+      "gmCue": "Moving through a busy town where something is off, or chasing a rumor. A dissonant string turn in the middle suits the moment someone notices you.",
       "annotationStatus": "draft",
       "confidence": "medium",
       "researchSources": [
         "https://www.nin.wiki/9_Ghosts_I",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/"
       ],
-      "notes": "Radio-like beat, calm piano, false dissonant turn, and blurred public movement in the booklet support transit unease."
+      "notes": "NIN Wiki: degraded radio-like beat, calm piano, drones, a false move into dissonant strings, then the earlier material returns. Measured louder first half, quieter second half."
     },
     {
       "id": "ghosts-ii-10",
@@ -319,24 +338,23 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Flooded Woods",
-      "tags": ["exploration", "wilderness", "horror", "suspense"],
+      "rpgTitle": "Rising Panic",
+      "tags": ["tense", "eerie", "dread", "horror"],
       "ratings": {
         "intensity": 3,
         "darkness": 4,
         "tension": 4,
-        "weirdness": 3
+        "weirdness": 4
       },
-      "gmCue": "Use for crossing dead wetlands, searching flooded ground, or a slow build in hostile terrain.",
+      "gmCue": "The moment a situation turns uncanny: whispers in the marsh, a mutant sighted, the cult's plan dawning. Static texture and whole-tone piano keep it off balance; it breaks down briefly near 1:50.",
       "annotationStatus": "draft",
       "confidence": "medium",
       "researchSources": [
         "https://www.nin.wiki/10_Ghosts_II",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/"
       ],
-      "notes": "Static/percussion build with whole-tone piano pairs with the booklet image of dead trees reflected in water."
+      "notes": "NIN Wiki: static-like backing and percussion build into whole-tone piano, break down and rebuild. Measured loud and noisy with one dip around 1:50."
     },
     {
       "id": "ghosts-ii-11",
@@ -350,24 +368,23 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Preparation",
-      "tags": ["preparation", "downtime", "suspense", "uneasy"],
+      "rpgTitle": "Cult Gathering",
+      "tags": ["menacing", "eerie", "ritual", "dread"],
       "ratings": {
         "intensity": 2,
         "darkness": 4,
         "tension": 3,
         "weirdness": 3
       },
-      "gmCue": "Use while characters prepare gear, plan a risky move, or ready themselves in a cramped space.",
+      "gmCue": "Approaching a cult meeting, a shrine to the Ruinous Powers, or getting ready for something you'll regret. A Berlioz witches' sabbath sample gives it an old-world, witchy undertone.",
       "annotationStatus": "draft",
-      "confidence": "medium",
+      "confidence": "high",
       "researchSources": [
         "https://www.nin.wiki/11_Ghosts_II",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/"
       ],
-      "notes": "Echoing guitar, low strings, piano, percussion, and the hand-on-guitar visual support a preparation cue."
+      "notes": "NIN Wiki: echoing guitar, pulsing low strings, piano, acoustic percussion, and an uncredited sample of Berlioz's 'Dream of a Witches' Sabbath'. Measured mid-quiet and bass-heavy."
     },
     {
       "id": "ghosts-ii-12",
@@ -381,26 +398,25 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Migration",
-      "tags": ["travel", "transition", "escalation", "movement"],
+      "rpgTitle": "Quiet, Then the Storm",
+      "tags": ["melancholy", "tense", "dread", "combat"],
       "ratings": {
         "intensity": 3,
-        "darkness": 2,
+        "darkness": 3,
         "tension": 3,
         "weirdness": 2
       },
-      "gmCue": "Use for a group on the move, a departure, or a scene that shifts from quiet to active.",
+      "gmCue": "Start it on a quiet moment and let it break: the ambush you've been foreshadowing. Lone piano for the first minute, then drums and guitars from about 1:00. Not a background loop.",
       "annotationStatus": "draft",
-      "confidence": "medium",
+      "confidence": "high",
       "researchSources": [
         "https://www.nin.wiki/12_Ghosts_II",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/",
         "https://popdose.com/listening-booth-nine-inch-nails-ghosts-i-iv/",
         "https://www.reddit.com/r/nin/comments/1gads1i/ghosts_albums_and_songs_appreciation_time/"
       ],
-      "notes": "Popdose and NIN Wiki both support the piano-to-heavier-electronics/escalation structure; booklet shows birds in flight."
+      "notes": "NIN Wiki and Popdose: lone piano develops into drums and guitars. Measured the widest split in the set: very quiet until ~1:00, then loud to the end."
     },
     {
       "id": "ghosts-ii-13",
@@ -414,24 +430,23 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Piano Room",
-      "tags": ["downtime", "interior", "quiet", "suspense"],
+      "rpgTitle": "Holding Breath",
+      "tags": ["eerie", "melancholy", "stealth", "aftermath"],
       "ratings": {
         "intensity": 1,
         "darkness": 3,
         "tension": 2,
         "weirdness": 3
       },
-      "gmCue": "Use for a quiet room, memory scene, or uneasy private moment around an instrument.",
+      "gmCue": "A cramped hiding place while something passes, a sickroom, or the quiet after a death. Soft piano with slow breathing sounds under it.",
       "annotationStatus": "draft",
       "confidence": "medium",
       "researchSources": [
         "https://www.nin.wiki/13_Ghosts_II",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/"
       ],
-      "notes": "Quiet piano, drones, slow breathing sounds, and warm piano-key imagery support a subdued interior cue."
+      "notes": "NIN Wiki: piano linked to track 12, quiet 8-bit beat, drones, slow breathing sounds. Measured one of the quietest, darkest-sounding tracks with a steady level."
     },
     {
       "id": "ghosts-ii-14",
@@ -445,24 +460,23 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Machinery",
-      "tags": ["technology", "work", "movement", "suspense"],
+      "rpgTitle": "On the Trail",
+      "tags": ["driving", "tense", "travel", "investigation"],
       "ratings": {
         "intensity": 3,
         "darkness": 2,
         "tension": 3,
-        "weirdness": 3
+        "weirdness": 2
       },
-      "gmCue": "Use for machinery, rhythmic labor, or a system coming online.",
+      "gmCue": "A determined push: following a fresh trail, a river barge making time, or piecing clues together on the move. It builds steadily, and the mandolin keeps it earthy.",
       "annotationStatus": "draft",
       "confidence": "medium",
       "researchSources": [
         "https://www.nin.wiki/14_Ghosts_II",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/"
       ],
-      "notes": "Effected beat, synths, fretted strings, percussion, and drum-pad imagery support mechanical motion."
+      "notes": "NIN Wiki: effected beat, synths, mandolins, fretted strings, percussion, guitars; later reused in The Social Network's 'Magnetic'. Measured a steady rise from start to finish with a regular pulse."
     },
     {
       "id": "ghosts-ii-15",
@@ -476,24 +490,23 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Searchlight",
-      "tags": ["stealth", "night", "search", "suspense"],
+      "rpgTitle": "Skittering",
+      "tags": ["eerie", "tense", "stealth", "town"],
       "ratings": {
         "intensity": 3,
-        "darkness": 3,
-        "tension": 4,
+        "darkness": 2,
+        "tension": 3,
         "weirdness": 4
       },
-      "gmCue": "Use for a night search, perimeter sweep, or suspicious activity near brush or ruins.",
+      "gmCue": "Something small and numerous scuttling in the walls, sneaking through a busy warehouse, or Skaven sign. Quirky, clattering and short.",
       "annotationStatus": "draft",
       "confidence": "low",
       "researchSources": [
         "https://www.nin.wiki/15_Ghosts_II",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/"
       ],
-      "notes": "Quirky beeping/percussion supports alertness, while the booklet image suggests harshly lit vegetation; needs listening confirmation."
+      "notes": "NIN Wiki: quirky beeping beat, cabinet-door percussion, crowd/kick interruptions, processed marimba. Measured loud and short (1:53). The electronic beeps may read as too modern; check before using."
     },
     {
       "id": "ghosts-ii-16",
@@ -507,24 +520,23 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Signal Room",
-      "tags": ["technology", "investigation", "weird", "suspense"],
+      "rpgTitle": "Twisted Things",
+      "tags": ["menacing", "frantic", "combat", "horror"],
       "ratings": {
         "intensity": 4,
-        "darkness": 3,
+        "darkness": 4,
         "tension": 4,
-        "weirdness": 4
+        "weirdness": 5
       },
-      "gmCue": "Use for a tangled electronics room, intercepted signal, or strange technical failure.",
+      "gmCue": "A fight against something wrong: mutants, a Chaos spawn, or a warpstone-tainted brawl. Grinding, distorted and alien.",
       "annotationStatus": "draft",
       "confidence": "medium",
       "researchSources": [
         "https://www.nin.wiki/16_Ghosts_II",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/"
       ],
-      "notes": "Odd percussion, synths, talkbox-like sounds, heavy guitars, and modular-cable imagery support a signal-room cue."
+      "notes": "NIN Wiki: decimated beat, synths, talkbox-like sounds, heavy guitars, odd percussion. Measured among the noisiest and loudest tracks."
     },
     {
       "id": "ghosts-ii-17",
@@ -538,24 +550,23 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Overlook",
-      "tags": ["exploration", "travel", "exposed", "suspense"],
+      "rpgTitle": "Hammer and Chain",
+      "tags": ["tense", "eerie", "investigation", "travel"],
       "ratings": {
         "intensity": 3,
-        "darkness": 3,
+        "darkness": 2,
         "tension": 3,
         "weirdness": 3
       },
-      "gmCue": "Use for a bright but tense overlook, exposed approach, or scene that builds through metallic rhythm.",
+      "gmCue": "Delving into old mine workings, a smithy district, or a methodical approach where every step clanks. Metallic percussion and marimba; it ends on marimba alone.",
       "annotationStatus": "draft",
       "confidence": "medium",
       "researchSources": [
         "https://www.nin.wiki/17_Ghosts_II",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/"
       ],
-      "notes": "Metallic percussion and marimba build; booklet shows a sunlit scrub/desert overlook."
+      "notes": "NIN Wiki: metallic clanging percussion and guitar melody build with marimba, then marimba alone at the end. Measured a quiet first 20 s, then a steady mid level with a regular pulse."
     },
     {
       "id": "ghosts-ii-18",
@@ -569,25 +580,24 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Corridor",
-      "tags": ["stealth", "pursuit", "corridor", "suspense"],
+      "rpgTitle": "Shadowing",
+      "tags": ["tense", "eerie", "stealth", "investigation", "town"],
       "ratings": {
         "intensity": 3,
         "darkness": 3,
-        "tension": 4,
+        "tension": 3,
         "weirdness": 3
       },
-      "gmCue": "Use for tailing someone through a corridor, surveillance, or a restrained pursuit.",
+      "gmCue": "Tailing a suspect through night streets, a long infiltration, or watching a house. Steady and over five minutes long, so it can carry a whole scene.",
       "annotationStatus": "draft",
       "confidence": "medium",
       "researchSources": [
         "https://www.nin.wiki/18_Ghosts_II",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/",
         "https://www.reddit.com/r/nin/comments/1gads1i/ghosts_albums_and_songs_appreciation_time/"
       ],
-      "notes": "Electronic beat, echoing synth/guitar, possible reversed vocal texture, and blurred corridor figure support this draft label."
+      "notes": "NIN Wiki: electronic drum beat, echoing synths, call-and-response guitar, pads, possibly reversed wordless vocals. Measured a steady mid level with a regular pulse across 5:23."
     },
     {
       "id": "ghosts-iii-19",
@@ -601,24 +611,23 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Damaged Device",
-      "tags": ["technology", "malfunction", "danger", "weird"],
+      "rpgTitle": "Clatter in the Deep",
+      "tags": ["menacing", "eerie", "dread", "horror"],
       "ratings": {
         "intensity": 4,
         "darkness": 4,
         "tension": 4,
-        "weirdness": 4
+        "weirdness": 5
       },
-      "gmCue": "Use for broken machinery, a malfunctioning artifact, or a room full of metallic impacts.",
+      "gmCue": "The noise in the tunnels is getting closer: Skaven machines, a forge of Chaos. It builds from sparse clatter to a wall of metal noise.",
       "annotationStatus": "draft",
       "confidence": "medium",
       "researchSources": [
         "https://www.nin.wiki/19_Ghosts_III",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/"
       ],
-      "notes": "Highly percussive metallic clanging and atonal guitar noise pair with the red effects-pedal close-up."
+      "notes": "NIN Wiki: metallic clanging, delayed electronic beat, atonal guitar noise. Measured a steady build from quiet to loud and the noisiest texture in the set."
     },
     {
       "id": "ghosts-iii-20",
@@ -632,25 +641,24 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Analysis",
-      "tags": ["investigation", "technology", "revelation", "escalation"],
+      "rpgTitle": "The Pattern",
+      "tags": ["tense", "investigation", "dread"],
       "ratings": {
         "intensity": 3,
         "darkness": 3,
         "tension": 4,
         "weirdness": 3
       },
-      "gmCue": "Use for studying evidence, working a timeline, or realizing the pattern is getting worse.",
+      "gmCue": "The investigation tightens: cross-checking testimony, the cult's pattern emerging, a deadline closing in. A brighter piano idea arrives late as the realization lands; loudest in the last minute.",
       "annotationStatus": "draft",
       "confidence": "medium",
       "researchSources": [
         "https://www.nin.wiki/20_Ghosts_III",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/",
         "https://popdose.com/listening-booth-nine-inch-nails-ghosts-i-iv/"
       ],
-      "notes": "Popdose highlights movement between piano and heavy electronics; booklet shows an editing/grid-like monitor."
+      "notes": "NIN Wiki and Popdose: low pulsing synth, kicks, distorted guitar, then a separate piano idea fading in. Measured steady until ~2:30, then rising to its loudest near the end."
     },
     {
       "id": "ghosts-iii-21",
@@ -664,25 +672,24 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Crossing",
-      "tags": ["travel", "exploration", "open-water", "movement"],
+      "rpgTitle": "Good Day on the River",
+      "tags": ["hopeful", "driving", "travel", "town"],
       "ratings": {
         "intensity": 3,
-        "darkness": 2,
+        "darkness": 1,
         "tension": 2,
         "weirdness": 3
       },
-      "gmCue": "Use for a water crossing, coastal travel, or a brighter rhythmic travel scene.",
+      "gmCue": "One of the few bright tracks: a good day on the road or river, a busy market, or a lighter montage. Use it for contrast. The retro synth solo can sound modern.",
       "annotationStatus": "draft",
       "confidence": "medium",
       "researchSources": [
         "https://www.nin.wiki/21_Ghosts_III",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/",
         "https://www.reddit.com/r/nin/comments/1gads1i/ghosts_albums_and_songs_appreciation_time/"
       ],
-      "notes": "Bright rhythmic marimbas, drums, and synths pair with the booklet image of open water and distant shore."
+      "notes": "NIN Wiki: bright rhythmic marimbas, synth brass/bass, live drums, retro synth solo. Measured the most percussive track in the set with a strong regular pulse."
     },
     {
       "id": "ghosts-iii-22",
@@ -696,24 +703,23 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Harsh Crossing",
-      "tags": ["travel", "danger", "exposed", "escalation"],
+      "rpgTitle": "Coming Apart",
+      "tags": ["eerie", "tense", "travel", "dread"],
       "ratings": {
-        "intensity": 4,
+        "intensity": 2,
         "darkness": 2,
-        "tension": 4,
+        "tension": 3,
         "weirdness": 4
       },
-      "gmCue": "Use for a difficult exposed crossing, hard travel, or a scene falling apart under pressure.",
+      "gmCue": "A journey that is quietly going wrong: the guide lies, the weather turns. Dulcimer and piano over pulsing synth; it deliberately falls apart and ends on piano alone.",
       "annotationStatus": "draft",
-      "confidence": "medium",
+      "confidence": "low",
       "researchSources": [
         "https://www.nin.wiki/22_Ghosts_III",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/"
       ],
-      "notes": "Hard drums, deliberate deconstruction, and the blinding water/sun image support a harsher travel cue."
+      "notes": "NIN Wiki: Buchla synth, bright piano, dulcimer, hard drums, deliberate deconstruction, piano alone at the end. Measured much quieter than 'hard drums' suggests, so the energy rating is uncertain."
     },
     {
       "id": "ghosts-iii-23",
@@ -727,24 +733,23 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Control Room",
-      "tags": ["technology", "operation", "low-tension", "suspense"],
+      "rpgTitle": "Dockside Dive",
+      "tags": ["menacing", "town", "intrigue"],
       "ratings": {
-        "intensity": 2,
+        "intensity": 3,
         "darkness": 3,
         "tension": 3,
-        "weirdness": 3
+        "weirdness": 2
       },
-      "gmCue": "Use for a low-lit operations room, preparation around racks of gear, or subdued technical work.",
+      "gmCue": "A smoky dockside tavern where everyone is armed, or a meeting with a fence or a gang boss. A crunchy blues riff; the ending crossfades into track 24.",
       "annotationStatus": "draft",
-      "confidence": "low",
+      "confidence": "medium",
       "researchSources": [
         "https://www.nin.wiki/23_Ghosts_III",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/"
       ],
-      "notes": "Label leans partly on the studio-rack visual; audio notes support low drone/static texture and gritty guitar."
+      "notes": "NIN Wiki: static-like synth, crunchy blues guitar riffs, low drones, crossfade into 24. Measured a quiet first 10 s, then a steady loud level."
     },
     {
       "id": "ghosts-iii-24",
@@ -758,25 +763,24 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Night Road",
-      "tags": ["chase", "danger", "night", "high-tension"],
+      "rpgTitle": "Pursuit",
+      "tags": ["frantic", "menacing", "chase", "combat"],
       "ratings": {
         "intensity": 5,
         "darkness": 4,
         "tension": 5,
         "weirdness": 3
       },
-      "gmCue": "Use for a night drive, chase approach, or aggressive movement toward danger.",
+      "gmCue": "A hard chase or a running fight; it eases off briefly around 1:10 to 1:30. Heads-up: it contains a short spoken English line sampled from a film, which can break immersion.",
       "annotationStatus": "draft",
-      "confidence": "medium",
+      "confidence": "high",
       "researchSources": [
         "https://www.nin.wiki/24_Ghosts_III",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/",
         "https://www.reddit.com/r/nin/comments/1gads1i/ghosts_albums_and_songs_appreciation_time/"
       ],
-      "notes": "Aggressive drums, synth bass, distorted guitar, and foggy streetlight-road imagery strongly support pursuit/approach use."
+      "notes": "NIN Wiki: aggressive drums, synth bass, a Mothman Prophecies dialogue sample, filtered middle section, distorted guitar. Measured loud with a dip at ~1:10 to 1:30."
     },
     {
       "id": "ghosts-iii-25",
@@ -790,24 +794,23 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Hidden Approach",
-      "tags": ["stealth", "exploration", "wilderness", "suspense"],
+      "rpgTitle": "Tolling Drone",
+      "tags": ["eerie", "menacing", "ritual", "dread"],
       "ratings": {
-        "intensity": 2,
+        "intensity": 3,
         "darkness": 4,
         "tension": 4,
-        "weirdness": 3
+        "weirdness": 4
       },
-      "gmCue": "Use for creeping through reeds, marsh edge, or other exposed cover while tension hangs.",
+      "gmCue": "Entering a desecrated chapel, a sorcerer mid-rite, or a Chaos-tainted place that hums. A heavy, bass-rich drone with bells; under two minutes.",
       "annotationStatus": "draft",
       "confidence": "medium",
       "researchSources": [
         "https://www.nin.wiki/25_Ghosts_III",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/"
       ],
-      "notes": "Tense dissonant drone, bells/chimes, quiet percussion, and tall-reed imagery support a stealthy approach cue."
+      "notes": "NIN Wiki: synth pad carried from 24, chimes, bells, quiet djembes, tense dissonant drone. Measured loud and the most bass-heavy track in Ghosts I-IV, with no real beat."
     },
     {
       "id": "ghosts-iii-26",
@@ -821,24 +824,23 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Cockpit",
-      "tags": ["technology", "danger", "crisis", "high-tension"],
+      "rpgTitle": "Melee",
+      "tags": ["frantic", "menacing", "combat"],
       "ratings": {
         "intensity": 5,
         "darkness": 4,
         "tension": 5,
-        "weirdness": 4
+        "weirdness": 3
       },
-      "gmCue": "Use for a cramped control position, alarms, or a loud scene where systems are failing.",
+      "gmCue": "A full-on fight: the cult strikes, a desperate defense. Fast, dense and discordant; it drops away in the last 20 seconds.",
       "annotationStatus": "draft",
-      "confidence": "medium",
+      "confidence": "high",
       "researchSources": [
         "https://www.nin.wiki/26_Ghosts_III",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/"
       ],
-      "notes": "Heavy drums, bass riff, distorted guitars, noisy atmosphere, and dark control-light imagery support this label."
+      "notes": "NIN Wiki: 158 BPM heavy drums, bass riff, distorted guitars, percussive piano, viola, noisy discordant atmosphere. Measured loud throughout until the final ~20 s."
     },
     {
       "id": "ghosts-iii-27",
@@ -852,24 +854,23 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Rail Journey",
-      "tags": ["travel", "exploration", "danger", "movement"],
+      "rpgTitle": "Hard Fighting",
+      "tags": ["menacing", "frantic", "combat", "chase"],
       "ratings": {
-        "intensity": 4,
-        "darkness": 3,
+        "intensity": 5,
+        "darkness": 4,
         "tension": 4,
-        "weirdness": 3
+        "weirdness": 2
       },
-      "gmCue": "Use for hard overland travel, rail movement, or a determined push across open terrain.",
+      "gmCue": "A long, grinding fight or a desperate march under attack. A bluesy bass breakdown mid-track gives the table a breath.",
       "annotationStatus": "draft",
-      "confidence": "medium",
+      "confidence": "high",
       "researchSources": [
         "https://www.nin.wiki/27_Ghosts_III",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/"
       ],
-      "notes": "Aggressive distorted drums/guitars and the railroad-through-desert booklet image support a travel-with-pressure cue."
+      "notes": "NIN Wiki: sustained distorted guitars, aggressive distorted drums, bluesy bass breakdown, then guitars return. Measured loud and heavily distorted throughout."
     },
     {
       "id": "ghosts-iv-28",
@@ -883,26 +884,25 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Flooded Street",
-      "tags": ["exploration", "aftermath", "urban", "desolation"],
+      "rpgTitle": "Adrift",
+      "tags": ["melancholy", "bleak", "travel", "aftermath", "wilderness"],
       "ratings": {
         "intensity": 2,
-        "darkness": 4,
-        "tension": 3,
-        "weirdness": 3
+        "darkness": 3,
+        "tension": 2,
+        "weirdness": 2
       },
-      "gmCue": "Use for a wet abandoned street, aftermath walk, or slow bleak scene with room to breathe.",
+      "gmCue": "A long river or road journey through grim country; a barge drifting past drowned villages. Banjo over low synth bass, steady for over five minutes, so it loops well.",
       "annotationStatus": "draft",
       "confidence": "high",
       "researchSources": [
         "https://www.nin.wiki/28_Ghosts_IV",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/",
         "https://onerecordperday.wordpress.com/2013/08/17/day-229-251-nine-inch-nails-ghosts-iv/",
         "https://www.reddit.com/r/nin/comments/ozo0xs/rnin_lets_give_ghosts_iiv_track_titles/"
       ],
-      "notes": "One Record Per Day supports bleak/cavernous slow development; booklet shows pooled street reflections."
+      "notes": "NIN Wiki: pulsing synth bass, banjo, filtered drums, hollow drone, piano, timpani. One Record Per Day: bleak and cavernous. Measured the darkest-sounding track in Ghosts I-IV with a very steady level."
     },
     {
       "id": "ghosts-iv-29",
@@ -916,26 +916,25 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Work Session",
-      "tags": ["downtime", "work", "preparation", "movement"],
+      "rpgTitle": "Worksong",
+      "tags": ["driving", "town", "travel"],
       "ratings": {
         "intensity": 3,
         "darkness": 2,
-        "tension": 3,
+        "tension": 2,
         "weirdness": 3
       },
-      "gmCue": "Use for rhythmic work, assembling a plan, or a busy practical scene that keeps moving.",
+      "gmCue": "Busy town scenes, dockworkers, or a montage of preparation. Upbeat for this set. Heads-up: it has short edited vocal samples.",
       "annotationStatus": "draft",
       "confidence": "medium",
       "researchSources": [
         "https://www.nin.wiki/29_Ghosts_IV",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/",
         "https://onerecordperday.wordpress.com/2013/08/17/day-229-251-nine-inch-nails-ghosts-iv/",
         "https://www.reddit.com/r/nin/comments/ozo0xs/rnin_lets_give_ghosts_iiv_track_titles/"
       ],
-      "notes": "Secondary notes support upbeat/work-rhythm language; booklet shows collaborators working in the studio."
+      "notes": "NIN Wiki: staccato live drums, synth loops, bass riff, chromatic piano, edited vocal samples, kalimba. One Record Per Day: upbeat. Measured a steady mid level, bright and busy."
     },
     {
       "id": "ghosts-iv-30",
@@ -949,26 +948,25 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Trial",
-      "tags": ["intrigue", "investigation", "judgment", "suspense"],
+      "rpgTitle": "The Trial",
+      "tags": ["tense", "eerie", "intrigue"],
       "ratings": {
-        "intensity": 3,
+        "intensity": 2,
         "darkness": 4,
-        "tension": 4,
+        "tension": 3,
         "weirdness": 4
       },
-      "gmCue": "Use for judgment, interrogation, bureaucracy, or a procedural scene with a hostile edge.",
+      "gmCue": "A witch hunter's tribunal, an interrogation, or a hostile hearing. Heads-up: the beat is built from real courtroom audio and slowed voices, which are audible at times; check it before using.",
       "annotationStatus": "draft",
-      "confidence": "high",
+      "confidence": "medium",
       "researchSources": [
         "https://www.nin.wiki/30_Ghosts_IV",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/",
         "https://onerecordperday.wordpress.com/2013/08/17/day-229-251-nine-inch-nails-ghosts-iv/",
         "https://www.reddit.com/r/nin/comments/ozo0xs/rnin_lets_give_ghosts_iiv_track_titles/"
       ],
-      "notes": "NIN Wiki identifies trial-verdict audio samples; secondary/fan language also clusters around trial/judgment."
+      "notes": "NIN Wiki: 7/4 beat made from trial-verdict audio, further trial samples, slowed Arabic voices, marimba. One Record Per Day: the least moving Ghosts IV track. Measured mid-quiet and steady."
     },
     {
       "id": "ghosts-iv-31",
@@ -982,26 +980,25 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Ambush",
-      "tags": ["combat", "ambush", "danger", "high-tension"],
+      "rpgTitle": "Night Terror",
+      "tags": ["menacing", "frantic", "combat", "horror"],
       "ratings": {
         "intensity": 5,
         "darkness": 5,
         "tension": 5,
         "weirdness": 3
       },
-      "gmCue": "Use for an ambush, sudden fight, or aggressive reveal where the scene turns dangerous fast.",
+      "gmCue": "The big fight against something monstrous. The most aggressive track in the set, and it gets louder right up to the end.",
       "annotationStatus": "draft",
       "confidence": "high",
       "researchSources": [
         "https://www.nin.wiki/31_Ghosts_IV",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/",
         "https://onerecordperday.wordpress.com/2013/08/17/day-229-251-nine-inch-nails-ghosts-iv/",
         "https://www.reddit.com/r/nin/comments/ozo0xs/rnin_lets_give_ghosts_iiv_track_titles/"
       ],
-      "notes": "One Record Per Day calls this among the most aggressive Ghosts material; NIN Wiki notes aggressive drums/guitars."
+      "notes": "NIN Wiki: aggressive drums and riff, distorted synth, heavy guitar, layers of noise. One Record Per Day: the most aggressive track on Ghosts. Measured the highest combined loudness and distortion, rising to the end."
     },
     {
       "id": "ghosts-iv-32",
@@ -1015,26 +1012,25 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Escalation",
-      "tags": ["intrigue", "planning", "suspense", "escalation"],
+      "rpgTitle": "The Plan in Motion",
+      "tags": ["tense", "driving", "intrigue", "stealth"],
       "ratings": {
-        "intensity": 4,
+        "intensity": 3,
         "darkness": 3,
-        "tension": 4,
+        "tension": 3,
         "weirdness": 3
       },
-      "gmCue": "Use when a plan starts moving, pressure rises, or separate parts of a scene lock together.",
+      "gmCue": "A heist or a scheme going down, or cutting between split parties. Syncopated piano throughout; a drone break around 2:10, then a louder final third.",
       "annotationStatus": "draft",
       "confidence": "medium",
       "researchSources": [
         "https://www.nin.wiki/32_Ghosts_IV",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/",
         "https://onerecordperday.wordpress.com/2013/08/17/day-229-251-nine-inch-nails-ghosts-iv/",
         "https://www.reddit.com/r/nin/comments/ozo0xs/rnin_lets_give_ghosts_iiv_track_titles/"
       ],
-      "notes": "Secondary notes support minimal entries/leaves and syncopated keyboard; NIN Wiki notes steady kick and shifting layers."
+      "notes": "NIN Wiki: rhythmic piano riff, kicks, mandolin, strings/drone middle section, distorted bass. One Record Per Day: minimal, built on syncopated keyboard. Measured a dip at ~2:10 and a louder last third."
     },
     {
       "id": "ghosts-iv-33",
@@ -1048,26 +1044,25 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Swarm",
-      "tags": ["horror", "danger", "crisis", "weird"],
+      "rpgTitle": "Gathering Swarm",
+      "tags": ["tense", "menacing", "dread", "horror"],
       "ratings": {
         "intensity": 4,
-        "darkness": 5,
+        "darkness": 4,
         "tension": 5,
-        "weirdness": 5
+        "weirdness": 4
       },
-      "gmCue": "Use for a swarm, panic spread, or synthetic post-apocalyptic threat closing in.",
+      "gmCue": "Dread that won't let up: a plague spreading, a horde gathering. Heads-up: synthetic beeps and a screeching-tires effect make it the least old-world track here, and it cuts off abruptly.",
       "annotationStatus": "draft",
-      "confidence": "high",
+      "confidence": "medium",
       "researchSources": [
         "https://www.nin.wiki/33_Ghosts_IV",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/",
         "https://onerecordperday.wordpress.com/2013/08/17/day-229-251-nine-inch-nails-ghosts-iv/",
         "https://www.reddit.com/r/nin/comments/ozo0xs/rnin_lets_give_ghosts_iiv_track_titles/"
       ],
-      "notes": "Secondary notes explicitly support synthetic/post-apocalyptic/anxious language; booklet shows many dark specks in stormy sky."
+      "notes": "NIN Wiki: delayed beat, beeping synths, synth noise, screeching tires with reverb, abrupt cut. One Record Per Day: the least organic Ghosts IV track. Measured loud and steady for 4 minutes."
     },
     {
       "id": "ghosts-iv-34",
@@ -1081,26 +1076,25 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Shoreline",
-      "tags": ["exploration", "travel", "aftermath", "desolation"],
+      "rpgTitle": "Desolation",
+      "tags": ["melancholy", "bleak", "aftermath", "travel"],
       "ratings": {
         "intensity": 2,
-        "darkness": 4,
-        "tension": 3,
-        "weirdness": 3
+        "darkness": 3,
+        "tension": 2,
+        "weirdness": 2
       },
-      "gmCue": "Use for a cold shoreline, lonely travel stop, or melancholy exterior after a hard event.",
+      "gmCue": "Walking off a battlefield, a funeral, or the cold road home after a hard session. It grows in the last two minutes with horns but stays restrained.",
       "annotationStatus": "draft",
       "confidence": "high",
       "researchSources": [
         "https://www.nin.wiki/34_Ghosts_IV",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/",
         "https://onerecordperday.wordpress.com/2013/08/17/day-229-251-nine-inch-nails-ghosts-iv/",
         "https://www.reddit.com/r/nin/comments/1gads1i/ghosts_albums_and_songs_appreciation_time/"
       ],
-      "notes": "One Record Per Day supports cold/desolate/melancholic language; booklet shows a calm shoreline horizon."
+      "notes": "NIN Wiki: synth bass, banjo/mandolin/piano opening, low piano, French horns, drone. One Record Per Day: desolate, cold, three melancholy sections. Measured quiet for four minutes, loudest in the final two."
     },
     {
       "id": "ghosts-iv-35",
@@ -1114,25 +1108,24 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Monitoring",
-      "tags": ["intrigue", "technology", "investigation", "suspense"],
+      "rpgTitle": "Closing In",
+      "tags": ["tense", "driving", "investigation", "stealth"],
       "ratings": {
-        "intensity": 4,
-        "darkness": 4,
+        "intensity": 3,
+        "darkness": 3,
         "tension": 4,
         "weirdness": 3
       },
-      "gmCue": "Use for monitoring a feed, tech-thriller procedure, or tense work in a dark control room.",
+      "gmCue": "Closing in on the culprit, a race against time, or tense legwork. Feedback and guitar bursts over a steady beat.",
       "annotationStatus": "draft",
-      "confidence": "high",
+      "confidence": "medium",
       "researchSources": [
         "https://www.nin.wiki/35_Ghosts_IV",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/",
         "https://onerecordperday.wordpress.com/2013/08/17/day-229-251-nine-inch-nails-ghosts-iv/"
       ],
-      "notes": "Secondary notes support feedback tension and modern procedural associations; booklet shows a worker at studio controls."
+      "notes": "NIN Wiki: static-like beat, synth noise, guitar bursts, scream-like guitar; reused in The Social Network's 'A Familiar Taste'. One Record Per Day: forward motion. Measured a steady mid-loud level."
     },
     {
       "id": "ghosts-iv-36",
@@ -1146,25 +1139,24 @@
         "https://www.nin.com/discography/",
         "https://archive.org/details/NineInchNailsGhostsI-Iv24bit48khz"
       ],
-      "rpgTitle": "Bathroom",
-      "tags": ["aftermath", "horror", "downtime", "quiet"],
+      "rpgTitle": "Abandoned Parlor",
+      "tags": ["melancholy", "eerie", "aftermath", "dread"],
       "ratings": {
         "intensity": 1,
         "darkness": 4,
-        "tension": 3,
-        "weirdness": 3
+        "tension": 2,
+        "weirdness": 2
       },
-      "gmCue": "Use for a small private room, bleak aftermath, or a quiet ending that still feels unsafe.",
+      "gmCue": "An abandoned manor's parlor, a dead child's room, or a quiet ending that still feels unsafe. It swells slightly around 1:30, and the last 15 seconds are silent.",
       "annotationStatus": "draft",
       "confidence": "high",
       "researchSources": [
         "https://www.nin.wiki/36_Ghosts_IV",
-        "https://www.nin.wiki/The_Photography_of_Ghosts_I%E2%80%93IV",
         "https://pitchfork.com/reviews/albums/11289-ghosts-i-iv/",
         "https://www.wired.com/2008/03/trent-reznor-ca/",
         "https://onerecordperday.wordpress.com/2013/08/17/day-229-251-nine-inch-nails-ghosts-iv/"
       ],
-      "notes": "One Record Per Day describes quiet delicate fear; NIN Wiki notes out-of-tune piano and room noise; booklet shows a stained sink drain."
+      "notes": "NIN Wiki: solo out-of-tune piano with room noise. One Record Per Day: delicate and fearful. Measured very quiet with a swell around 1:30 to 2:00 and silence at the end."
     },
     {
       "id": "ghosts-v-together-01",
@@ -1178,15 +1170,15 @@
         "https://www.nin.com/discography/",
         "https://drive.google.com/drive/folders/1Ju0YG1l8JkdyT5bkcKSsTGgzjLU3ofNx"
       ],
-      "rpgTitle": "Threshold",
-      "tags": ["threshold", "downtime", "mystery", "low-tension"],
+      "rpgTitle": "Slow Farewell",
+      "tags": ["calm", "melancholy", "rest", "ritual"],
       "ratings": {
         "intensity": 1,
         "darkness": 2,
-        "tension": 2,
-        "weirdness": 3
+        "tension": 1,
+        "weirdness": 2
       },
-      "gmCue": "Use for a slow opening, arrival at a threshold, or ritual preparation with little immediate threat.",
+      "gmCue": "A long background bed: a temple vigil, a funeral rite, or the slow start to a session. Nearly ten minutes, with near-choral synth voices and a gentle swell around eight minutes in.",
       "annotationStatus": "draft",
       "confidence": "high",
       "researchSources": [
@@ -1195,7 +1187,7 @@
         "https://musicmattersmedia.com/2020/05/31/nine-inch-nails-ghosts-v-together-ghosts-vi-locusts-album-review/",
         "https://www.reddit.com/r/nin/comments/1gads1i/ghosts_albums_and_songs_appreciation_time/"
       ],
-      "notes": "Pitchfork and Music Matters support slow rollout, woozy buzz, repeated notes, and near-choral layering."
+      "notes": "NIN Wiki: synth drones and a slow piano arpeggio. Pitchfork: five-note melody, layered synthesized voices, near-choral. Measured steady with a mild swell near 7:30 to 8:30."
     },
     {
       "id": "ghosts-v-together-02",
@@ -1210,14 +1202,14 @@
         "https://drive.google.com/drive/folders/1Ju0YG1l8JkdyT5bkcKSsTGgzjLU3ofNx"
       ],
       "rpgTitle": "Sanctuary",
-      "tags": ["downtime", "hopeful", "calm", "low-tension"],
+      "tags": ["hopeful", "calm", "rest"],
       "ratings": {
         "intensity": 1,
         "darkness": 1,
         "tension": 1,
-        "weirdness": 2
+        "weirdness": 1
       },
-      "gmCue": "Use for shelter, a protected place, reunion, or a quiet scene where the table can breathe.",
+      "gmCue": "A safe haven: a friendly inn, a reunion, or a night when nothing is hunting you. One of the warmest tracks; use it sparingly in a grim game. It does grow fuller and brighter in the middle.",
       "annotationStatus": "draft",
       "confidence": "high",
       "researchSources": [
@@ -1226,7 +1218,7 @@
         "https://musicmattersmedia.com/2020/05/31/nine-inch-nails-ghosts-v-together-ghosts-vi-locusts-album-review/",
         "https://www.reddit.com/r/nin/comments/1gads1i/ghosts_albums_and_songs_appreciation_time/"
       ],
-      "notes": "Official album framing and reviews support Together as the hopeful/steady side of the V-VI pair."
+      "notes": "NIN Wiki: synth pads, piano and guitar on a major-key foundation. Pitchfork: ambient uplift. Measured a slow build to a sustained middle, then easing out."
     },
     {
       "id": "ghosts-v-together-03",
@@ -1240,22 +1232,22 @@
         "https://www.nin.com/discography/",
         "https://drive.google.com/drive/folders/1Ju0YG1l8JkdyT5bkcKSsTGgzjLU3ofNx"
       ],
-      "rpgTitle": "Open Ground",
-      "tags": ["exploration", "travel", "open-space", "hopeful"],
+      "rpgTitle": "Open Country",
+      "tags": ["hopeful", "calm", "travel", "wilderness"],
       "ratings": {
-        "intensity": 1,
-        "darkness": 2,
-        "tension": 2,
+        "intensity": 2,
+        "darkness": 1,
+        "tension": 1,
         "weirdness": 2
       },
-      "gmCue": "Use for wide exterior space, travel into open ground, or a scene with filmic distance.",
+      "gmCue": "Crossing open country on a good day, or the first sight of a city across the plain. Heads-up: its string pads are the most 'film score' sound on these albums, and the last minute is nearly silent.",
       "annotationStatus": "draft",
-      "confidence": "high",
+      "confidence": "medium",
       "researchSources": [
         "https://www.nin.wiki/Out_In_The_Open",
         "https://pitchfork.com/reviews/albums/nine-inch-nails-ghosts-v-together-ghosts-vi-locusts/"
       ],
-      "notes": "Pitchfork notes faux string-section opening and filmic feel; NIN Wiki notes synth string pads and chiming melody."
+      "notes": "NIN Wiki: synth string pads, oscillating bass synth, chiming vibraphone-like melody. Pitchfork: faux string section, filmic. Measured loud in the middle and near-silent after ~4:10."
     },
     {
       "id": "ghosts-v-together-04",
@@ -1269,22 +1261,22 @@
         "https://www.nin.com/discography/",
         "https://drive.google.com/drive/folders/1Ju0YG1l8JkdyT5bkcKSsTGgzjLU3ofNx"
       ],
-      "rpgTitle": "Vigil",
-      "tags": ["downtime", "watch", "suspense", "low-tension"],
+      "rpgTitle": "Night Vigil",
+      "tags": ["eerie", "calm", "rest", "ritual"],
       "ratings": {
-        "intensity": 1,
+        "intensity": 2,
         "darkness": 3,
         "tension": 2,
         "weirdness": 3
       },
-      "gmCue": "Use for waiting, keeping watch, or a solemn low-action scene with some shadow under it.",
+      "gmCue": "Keeping watch through the night, a temple at midnight, or a long patient scene with something under it. Dark drones with steady arpeggios.",
       "annotationStatus": "draft",
       "confidence": "low",
       "researchSources": [
         "https://www.nin.wiki/With_Faith",
         "https://www.reddit.com/r/nin/comments/1gads1i/ghosts_albums_and_songs_appreciation_time/"
       ],
-      "notes": "Mostly sourced from NIN Wiki dark ambient drones/synth arpeggios and a weak fan-preference signal; needs direct listening review."
+      "notes": "NIN Wiki: dark ambient drones, synth arpeggios, horn-like synth. Little outside description. Measured a slow build to a steady mid level with a regular pulse."
     },
     {
       "id": "ghosts-v-together-05",
@@ -1298,22 +1290,22 @@
         "https://www.nin.com/discography/",
         "https://drive.google.com/drive/folders/1Ju0YG1l8JkdyT5bkcKSsTGgzjLU3ofNx"
       ],
-      "rpgTitle": "Separation",
-      "tags": ["downtime", "separation", "melancholy", "low-tension"],
+      "rpgTitle": "Parting Ways",
+      "tags": ["melancholy", "calm", "aftermath", "rest"],
       "ratings": {
-        "intensity": 1,
+        "intensity": 2,
         "darkness": 3,
-        "tension": 2,
-        "weirdness": 3
+        "tension": 1,
+        "weirdness": 2
       },
-      "gmCue": "Use for distance between characters, separation, or a long reflective scene with a darker tint.",
+      "gmCue": "A companion's death or departure, or a long reflective camp. Heads-up: at 13 minutes it builds to its loudest in the final three, so fade it before then to keep it understated.",
       "annotationStatus": "draft",
       "confidence": "medium",
       "researchSources": [
         "https://www.nin.wiki/Apart",
         "https://pitchfork.com/reviews/albums/nine-inch-nails-ghosts-v-together-ghosts-vi-locusts/"
       ],
-      "notes": "NIN Wiki notes minor-key relationship to Together; Pitchfork notes a mid-track flute/new-element contrast."
+      "notes": "NIN Wiki: soft pads, piano, bass synth, minor-key, melody reference to '1 Ghosts I'. Pitchfork: a flute enters midway. Measured quiet for most of its length with a large swell in the last ~3 minutes."
     },
     {
       "id": "ghosts-v-together-06",
@@ -1327,24 +1319,24 @@
         "https://www.nin.com/discography/",
         "https://drive.google.com/drive/folders/1Ju0YG1l8JkdyT5bkcKSsTGgzjLU3ofNx"
       ],
-      "rpgTitle": "Contact",
-      "tags": ["contact", "technology", "mystery", "hopeful"],
+      "rpgTitle": "Gentle Magic",
+      "tags": ["calm", "eerie", "ritual", "rest"],
       "ratings": {
         "intensity": 2,
         "darkness": 2,
-        "tension": 2,
+        "tension": 1,
         "weirdness": 4
       },
-      "gmCue": "Use for first contact, a warm signal from far away, or a gentle technological reveal.",
+      "gmCue": "A healing rite, a wizard's tower, or a strange but kindly presence. Its science-fiction synth effects read as magic at a fantasy table.",
       "annotationStatus": "draft",
-      "confidence": "high",
+      "confidence": "medium",
       "researchSources": [
         "https://www.nin.wiki/Your_Touch",
         "https://pitchfork.com/reviews/albums/nine-inch-nails-ghosts-v-together-ghosts-vi-locusts/",
         "https://musicmattersmedia.com/2020/05/31/nine-inch-nails-ghosts-v-together-ghosts-vi-locusts-album-review/",
         "https://www.reddit.com/r/nin/comments/1gads1i/ghosts_albums_and_songs_appreciation_time/"
       ],
-      "notes": "Pitchfork supports science-fictional electronic effects; NIN Wiki and fan notes support warm piano/electronic associations."
+      "notes": "NIN Wiki: synth, bass synth, piano, atonal synth. Pitchfork: science-fictional electronic effects. Measured steady and clean-sounding."
     },
     {
       "id": "ghosts-v-together-07",
@@ -1358,22 +1350,22 @@
         "https://www.nin.com/discography/",
         "https://drive.google.com/drive/folders/1Ju0YG1l8JkdyT5bkcKSsTGgzjLU3ofNx"
       ],
-      "rpgTitle": "Recovery",
-      "tags": ["recovery", "hopeful", "downtime", "low-tension"],
+      "rpgTitle": "Mending",
+      "tags": ["melancholy", "hopeful", "rest", "aftermath"],
       "ratings": {
         "intensity": 1,
         "darkness": 2,
-        "tension": 2,
+        "tension": 1,
         "weirdness": 3
       },
-      "gmCue": "Use for recovery, tending wounds, or a fragile hopeful moment after something hard.",
+      "gmCue": "Tending wounds, or a quiet morning after the worst night. Heads-up: a high, tinnitus-like tone in the middle section grates on some listeners.",
       "annotationStatus": "draft",
       "confidence": "low",
       "researchSources": [
         "https://www.nin.wiki/Hope_We_Can_Again",
         "https://musicmattersmedia.com/2020/05/31/nine-inch-nails-ghosts-v-together-ghosts-vi-locusts-album-review/"
       ],
-      "notes": "The only secondary note is flagged in research because the source used a wrong title; keep this low-confidence until listening review."
+      "notes": "NIN Wiki: synth pads, bass synth, glockenspiel-like sounds; midsection reported as tinnitus-like. Only one outside review, with a wrong title. Measured steady with a dip around 4:00 to 5:00."
     },
     {
       "id": "ghosts-v-together-08",
@@ -1387,22 +1379,22 @@
         "https://www.nin.com/discography/",
         "https://drive.google.com/drive/folders/1Ju0YG1l8JkdyT5bkcKSsTGgzjLU3ofNx"
       ],
-      "rpgTitle": "Breakthrough",
-      "tags": ["transition", "revelation", "hopeful", "escalation"],
+      "rpgTitle": "False Calm",
+      "tags": ["melancholy", "tense", "rest", "dread"],
       "ratings": {
-        "intensity": 4,
-        "darkness": 2,
-        "tension": 3,
+        "intensity": 2,
+        "darkness": 3,
+        "tension": 2,
         "weirdness": 3
       },
-      "gmCue": "Use when a calm scene breaks open, characters push through, or a late act gains momentum.",
+      "gmCue": "A calm scene that gets interrupted. Heads-up: fast electronic beats erupt from about 3:30 to 6:00 and then fall back, so it is not a background loop.",
       "annotationStatus": "draft",
       "confidence": "high",
       "researchSources": [
         "https://www.nin.wiki/Still_Right_Here",
         "https://pitchfork.com/reviews/albums/nine-inch-nails-ghosts-v-together-ghosts-vi-locusts/"
       ],
-      "notes": "Pitchfork notes a bracing rhythmic eruption after ambient uplift; NIN Wiki notes unexpected fast electronic beats and noise."
+      "notes": "NIN Wiki: piano, drones, guitar swells, unexpected fast electronic beats, atonal noise. Pitchfork: a bracing rhythmic eruption around 4:30. Measured quiet, loud from ~3:30 to ~6:00, quiet again."
     },
     {
       "id": "ghosts-vi-locusts-01",
@@ -1416,15 +1408,15 @@
         "https://www.nin.com/discography/",
         "https://drive.google.com/drive/folders/1Ju0YG1l8JkdyT5bkcKSsTGgzjLU3ofNx"
       ],
-      "rpgTitle": "Clock Room",
-      "tags": ["horror", "time-pressure", "suspense", "danger"],
+      "rpgTitle": "Cursed Clock",
+      "tags": ["tense", "eerie", "dread", "investigation"],
       "ratings": {
         "intensity": 3,
-        "darkness": 5,
-        "tension": 5,
+        "darkness": 4,
+        "tension": 4,
         "weirdness": 4
       },
-      "gmCue": "Use for a cursed mechanism, locked room, or the first sign that time is working against the party.",
+      "gmCue": "Time is running out: the ritual at midnight, a clocktower hideout, or a scene of creeping paranoia. Clockwork piano under a high, ringing drone.",
       "annotationStatus": "draft",
       "confidence": "high",
       "researchSources": [
@@ -1432,7 +1424,7 @@
         "https://pitchfork.com/reviews/albums/nine-inch-nails-ghosts-v-together-ghosts-vi-locusts/",
         "https://theprogressiveaspect.net/blog/2020/04/07/nine-inch-nails-ghost-v-together-ghosts-vi-locusts/"
       ],
-      "notes": "Pitchfork supports clockwork/paranoid language; Progressive Aspect identifies this as where Locusts turns darker."
+      "notes": "NIN Wiki: chaotic percussive short piano notes, high ringing siren-like drone. Pitchfork: clockwork, paranoid. Measured a regular pulse with loudness rising and falling every half minute."
     },
     {
       "id": "ghosts-vi-locusts-02",
@@ -1446,15 +1438,15 @@
         "https://www.nin.com/discography/",
         "https://drive.google.com/drive/folders/1Ju0YG1l8JkdyT5bkcKSsTGgzjLU3ofNx"
       ],
-      "rpgTitle": "Investigation",
-      "tags": ["investigation", "intrigue", "urban", "suspense"],
+      "rpgTitle": "Fog-Bound Streets",
+      "tags": ["tense", "eerie", "investigation", "town"],
       "ratings": {
         "intensity": 2,
-        "darkness": 5,
-        "tension": 4,
-        "weirdness": 4
+        "darkness": 4,
+        "tension": 3,
+        "weirdness": 3
       },
-      "gmCue": "Use for a noir investigation, searching an unsafe district, or following clues through foggy streets.",
+      "gmCue": "A night investigation in the city: Altdorf fog, Nuln back streets. Nearly eleven minutes. Heads-up: the muted trumpet can read as noir jazz rather than old-world.",
       "annotationStatus": "draft",
       "confidence": "high",
       "researchSources": [
@@ -1463,7 +1455,7 @@
         "https://theprogressiveaspect.net/blog/2020/04/07/nine-inch-nails-ghost-v-together-ghosts-vi-locusts/",
         "https://www.reddit.com/r/nin/comments/1gads1i/ghosts_albums_and_songs_appreciation_time/"
       ],
-      "notes": "Pitchfork and Progressive Aspect support sinister fog/trumpet/noir-adjacent language."
+      "notes": "NIN Wiki: circular Philip Glass-like piano, muted trumpet, synth/noise loops. The Progressive Aspect: sinister ambient fog. Measured steady with a louder stretch around 6:30 to 8:30."
     },
     {
       "id": "ghosts-vi-locusts-03",
@@ -1477,24 +1469,24 @@
         "https://www.nin.com/discography/",
         "https://drive.google.com/drive/folders/1Ju0YG1l8JkdyT5bkcKSsTGgzjLU3ofNx"
       ],
-      "rpgTitle": "Nervous Crowd",
-      "tags": ["intrigue", "suspense", "weird", "movement"],
+      "rpgTitle": "Uneasy Waltz",
+      "tags": ["tense", "melancholy", "intrigue", "town"],
       "ratings": {
-        "intensity": 3,
-        "darkness": 4,
-        "tension": 5,
-        "weirdness": 4
+        "intensity": 2,
+        "darkness": 3,
+        "tension": 3,
+        "weirdness": 3
       },
-      "gmCue": "Use for an anxious social scene, unsettled crowd, or formal event where everyone knows something is wrong.",
+      "gmCue": "A noble's ball where everyone is scheming, or an awkward feast with a cultist at the table. Piano and trumpet over dark drones; it swells around six minutes in.",
       "annotationStatus": "draft",
-      "confidence": "high",
+      "confidence": "medium",
       "researchSources": [
         "https://www.nin.wiki/The_Worriment_Waltz",
         "https://pitchfork.com/reviews/albums/nine-inch-nails-ghosts-v-together-ghosts-vi-locusts/",
         "https://musicmattersmedia.com/2020/05/31/nine-inch-nails-ghosts-v-together-ghosts-vi-locusts-album-review/",
         "https://www.reddit.com/r/nin/comments/1gads1i/ghosts_albums_and_songs_appreciation_time/"
       ],
-      "notes": "Reviews support anxious motion, horns/trumpet, and unusually uptempo waltz framing."
+      "notes": "NIN Wiki: piano melody and chords, plaintive trumpet, dark drones. Music Matters: unusually uptempo. Measured mostly quiet with a swell near 6:00 to 7:00."
     },
     {
       "id": "ghosts-vi-locusts-04",
@@ -1508,15 +1500,15 @@
         "https://www.nin.com/discography/",
         "https://drive.google.com/drive/folders/1Ju0YG1l8JkdyT5bkcKSsTGgzjLU3ofNx"
       ],
-      "rpgTitle": "Escape",
-      "tags": ["chase", "escape", "danger", "high-tension"],
+      "rpgTitle": "Flight",
+      "tags": ["frantic", "chase", "combat"],
       "ratings": {
         "intensity": 5,
-        "darkness": 4,
+        "darkness": 3,
         "tension": 5,
         "weirdness": 3
       },
-      "gmCue": "Use for a chase, escape, or frantic fight where movement matters more than subtlety.",
+      "gmCue": "An all-out escape: the building's on fire, the mob is coming. A big drum breakdown, and the last minute drops away.",
       "annotationStatus": "draft",
       "confidence": "high",
       "researchSources": [
@@ -1524,7 +1516,7 @@
         "https://pitchfork.com/reviews/albums/nine-inch-nails-ghosts-v-together-ghosts-vi-locusts/",
         "https://www.reddit.com/r/nin/comments/1gads1i/ghosts_albums_and_songs_appreciation_time/"
       ],
-      "notes": "Official title plus Pitchfork drum-breakdown note and NIN Wiki frenetic percussion strongly support chase/escape use."
+      "notes": "NIN Wiki: 146 BPM circular synth, insistent percussion, frenetic drum solo. Pitchfork: a large drum breakdown. Measured loud from ~0:40 to ~4:40, then quiet."
     },
     {
       "id": "ghosts-vi-locusts-05",
@@ -1538,22 +1530,22 @@
         "https://www.nin.com/discography/",
         "https://drive.google.com/drive/folders/1Ju0YG1l8JkdyT5bkcKSsTGgzjLU3ofNx"
       ],
-      "rpgTitle": "Bad News",
-      "tags": ["crisis", "warning", "suspense", "short-cue"],
+      "rpgTitle": "Alarm Bells",
+      "tags": ["tense", "eerie", "dread", "horror"],
       "ratings": {
         "intensity": 3,
         "darkness": 4,
         "tension": 5,
         "weirdness": 4
       },
-      "gmCue": "Use when the bad thing happens off-screen, a warning arrives, or the table realizes the situation has changed.",
+      "gmCue": "The moment the bad thing starts: the bell tolls, the plague cart arrives. Persistent chiming keeps the table on edge; it peaks around two minutes.",
       "annotationStatus": "draft",
-      "confidence": "low",
+      "confidence": "medium",
       "researchSources": [
         "https://www.nin.wiki/When_It_Happens_(Don%27t_Mind_Me)",
         "https://www.reddit.com/r/nin/comments/1gads1i/ghosts_albums_and_songs_appreciation_time/"
       ],
-      "notes": "Mostly based on NIN Wiki atonal piano/anxious chiming and title context; needs more secondary support."
+      "notes": "NIN Wiki: atonal piano, anxious persistent chiming, percussion and noise layers. Measured mid-loud with a regular pulse, peaking near 2:00."
     },
     {
       "id": "ghosts-vi-locusts-06",
@@ -1567,15 +1559,15 @@
         "https://www.nin.com/discography/",
         "https://drive.google.com/drive/folders/1Ju0YG1l8JkdyT5bkcKSsTGgzjLU3ofNx"
       ],
-      "rpgTitle": "Crash Site",
-      "tags": ["aftermath", "crisis", "investigation", "danger"],
+      "rpgTitle": "Wreckage",
+      "tags": ["bleak", "eerie", "aftermath", "investigation"],
       "ratings": {
-        "intensity": 2,
+        "intensity": 1,
         "darkness": 4,
-        "tension": 4,
-        "weirdness": 4
+        "tension": 3,
+        "weirdness": 3
       },
-      "gmCue": "Use at a crash site, after a disaster, or when a recorded message makes the scene worse.",
+      "gmCue": "Coming upon the aftermath: an overturned coach, bodies on the road. Heads-up: it contains a spoken telephone-message sample, and it is very quiet, so raise its volume.",
       "annotationStatus": "draft",
       "confidence": "medium",
       "researchSources": [
@@ -1583,7 +1575,7 @@
         "https://musicmattersmedia.com/2020/05/31/nine-inch-nails-ghosts-v-together-ghosts-vi-locusts-album-review/",
         "https://www.reddit.com/r/nin/comments/1gads1i/ghosts_albums_and_songs_appreciation_time/"
       ],
-      "notes": "NIN Wiki notes telephone intercept-message sample; Music Matters highlights the pessimistic title context."
+      "notes": "NIN Wiki: piano, low drones, noise loops, a telephone intercept-message sample. Measured the quietest track in the module by a wide margin."
     },
     {
       "id": "ghosts-vi-locusts-07",
@@ -1597,19 +1589,19 @@
         "https://www.nin.com/discography/",
         "https://drive.google.com/drive/folders/1Ju0YG1l8JkdyT5bkcKSsTGgzjLU3ofNx"
       ],
-      "rpgTitle": "Quick Fix",
-      "tags": ["repair", "technology", "crisis", "short-cue"],
+      "rpgTitle": "Stopgap",
+      "tags": ["tense", "dread"],
       "ratings": {
-        "intensity": 3,
+        "intensity": 2,
         "darkness": 3,
-        "tension": 4,
-        "weirdness": 4
+        "tension": 3,
+        "weirdness": 3
       },
-      "gmCue": "Use for an improvised repair, temporary solution, or rushed technical workaround.",
+      "gmCue": "A short cue for a hurried workaround: barring the door, a quick bandage, buying a minute. Under two minutes.",
       "annotationStatus": "draft",
       "confidence": "low",
       "researchSources": ["https://www.nin.wiki/Temp_Fix"],
-      "notes": "Low-confidence draft from official title and NIN Wiki instrumentation only; needs secondary support."
+      "notes": "NIN Wiki: drones, piano, guitars, odd percussion. No outside description; scene use is mostly from the title. Measured mid level, short (1:46)."
     },
     {
       "id": "ghosts-vi-locusts-08",
@@ -1623,15 +1615,15 @@
         "https://www.nin.com/discography/",
         "https://drive.google.com/drive/folders/1Ju0YG1l8JkdyT5bkcKSsTGgzjLU3ofNx"
       ],
-      "rpgTitle": "Betrayal",
-      "tags": ["intrigue", "betrayal", "suspense", "low-tension"],
+      "rpgTitle": "Doubt",
+      "tags": ["tense", "melancholy", "intrigue"],
       "ratings": {
         "intensity": 2,
-        "darkness": 4,
-        "tension": 4,
-        "weirdness": 3
+        "darkness": 3,
+        "tension": 3,
+        "weirdness": 2
       },
-      "gmCue": "Use for a trust break, quiet betrayal, or a conversation where the pattern finally becomes clear.",
+      "gmCue": "A conversation where the patron's story stops adding up, or an argument inside the party. Steady circular piano.",
       "annotationStatus": "draft",
       "confidence": "medium",
       "researchSources": [
@@ -1639,7 +1631,7 @@
         "https://musicmattersmedia.com/2020/05/31/nine-inch-nails-ghosts-v-together-ghosts-vi-locusts-album-review/",
         "https://www.reddit.com/r/nin/comments/1gads1i/ghosts_albums_and_songs_appreciation_time/"
       ],
-      "notes": "Music Matters supports pessimistic/trust-fading title context; NIN Wiki notes circular piano/synth patterns."
+      "notes": "NIN Wiki: synth and circular piano in a Philip Glass vein. Outside sources only comment on the title. Measured steady and quiet-to-mid."
     },
     {
       "id": "ghosts-vi-locusts-09",
@@ -1653,22 +1645,22 @@
         "https://www.nin.com/discography/",
         "https://drive.google.com/drive/folders/1Ju0YG1l8JkdyT5bkcKSsTGgzjLU3ofNx"
       ],
-      "rpgTitle": "Crisis",
-      "tags": ["crisis", "horror", "night", "suspense"],
+      "rpgTitle": "A Bad Night",
+      "tags": ["bleak", "eerie", "dread", "rest"],
       "ratings": {
-        "intensity": 3,
+        "intensity": 2,
         "darkness": 5,
-        "tension": 5,
-        "weirdness": 4
+        "tension": 3,
+        "weirdness": 3
       },
-      "gmCue": "Use for a bad night, spiraling crisis, or a scene where things are not yet violent but clearly wrong.",
+      "gmCue": "A sleepless night camped somewhere wrong, or the hours after a horror. Degraded piano with slow, siren-like swells.",
       "annotationStatus": "draft",
       "confidence": "medium",
       "researchSources": [
         "https://www.nin.wiki/A_Really_Bad_Night",
         "https://musicmattersmedia.com/2020/05/31/nine-inch-nails-ghosts-v-together-ghosts-vi-locusts-album-review/"
       ],
-      "notes": "NIN Wiki degraded piano/siren-like synth plus Music Matters pessimistic-title context support a crisis label."
+      "notes": "NIN Wiki: degraded piano, synth pads, slow siren-like synth. Measured quiet with gentle swells and no steady beat."
     },
     {
       "id": "ghosts-vi-locusts-10",
@@ -1682,22 +1674,22 @@
         "https://www.nin.com/discography/",
         "https://drive.google.com/drive/folders/1Ju0YG1l8JkdyT5bkcKSsTGgzjLU3ofNx"
       ],
-      "rpgTitle": "New Routine",
-      "tags": ["crisis", "routine", "suspense", "weird"],
+      "rpgTitle": "Town Under Curfew",
+      "tags": ["tense", "driving", "town", "dread"],
       "ratings": {
-        "intensity": 4,
-        "darkness": 4,
-        "tension": 5,
-        "weirdness": 4
+        "intensity": 3,
+        "darkness": 3,
+        "tension": 4,
+        "weirdness": 3
       },
-      "gmCue": "Use for adapting to a hostile new normal, rushed routine, or pressure that has become everyday.",
+      "gmCue": "A town under quarantine or curfew, or daily life under pressure. Busy piano and bouncy bass; anxious rather than violent.",
       "annotationStatus": "draft",
       "confidence": "medium",
       "researchSources": [
         "https://www.nin.wiki/Your_New_Normal",
         "https://musicmattersmedia.com/2020/05/31/nine-inch-nails-ghosts-v-together-ghosts-vi-locusts-album-review/"
       ],
-      "notes": "Music Matters treats the title as crisis-era context; NIN Wiki notes frantic piano and bouncy bass."
+      "notes": "NIN Wiki: frantic piano like 'The Cursed Clock', bouncy bass, mallet sounds. Scene use partly from the title. Measured mid level with a regular pulse."
     },
     {
       "id": "ghosts-vi-locusts-11",
@@ -1711,22 +1703,22 @@
         "https://www.nin.com/discography/",
         "https://drive.google.com/drive/folders/1Ju0YG1l8JkdyT5bkcKSsTGgzjLU3ofNx"
       ],
-      "rpgTitle": "Pressure",
-      "tags": ["horror", "pressure", "suspense", "danger"],
+      "rpgTitle": "Something Breathing",
+      "tags": ["menacing", "eerie", "horror", "dread", "wilderness"],
       "ratings": {
         "intensity": 2,
         "darkness": 5,
-        "tension": 5,
-        "weirdness": 4
+        "tension": 4,
+        "weirdness": 5
       },
-      "gmCue": "Use when the air feels wrong, pressure builds slowly, or characters must stay calm under dread.",
+      "gmCue": "Deep caves, a lair, or the sense of a huge creature asleep nearby. Wind and breathing-like swells with no beat.",
       "annotationStatus": "draft",
       "confidence": "high",
       "researchSources": [
         "https://www.nin.wiki/Just_Breathe",
         "https://pitchfork.com/reviews/albums/nine-inch-nails-ghosts-v-together-ghosts-vi-locusts/"
       ],
-      "notes": "Pitchfork notes massive inhaling/exhaling; NIN Wiki notes dark drones, wind, noise loops, and sparse atonal piano."
+      "notes": "NIN Wiki: dark ambient drones, noise loops, wind sounds, sparse atonal piano. Pitchfork: the sound of something massive inhaling and exhaling. Measured no detectable pulse; quiet first 30 s, then steady."
     },
     {
       "id": "ghosts-vi-locusts-12",
@@ -1740,19 +1732,19 @@
         "https://www.nin.com/discography/",
         "https://drive.google.com/drive/folders/1Ju0YG1l8JkdyT5bkcKSsTGgzjLU3ofNx"
       ],
-      "rpgTitle": "Stalking",
-      "tags": ["stealth", "pursuit", "horror", "short-cue"],
+      "rpgTitle": "Unseen Watcher",
+      "tags": ["menacing", "eerie", "stealth", "horror"],
       "ratings": {
-        "intensity": 2,
+        "intensity": 1,
         "darkness": 5,
-        "tension": 5,
+        "tension": 4,
         "weirdness": 3
       },
-      "gmCue": "Use for someone nearby but unseen, a short stalking beat, or a dark cutaway behind the party.",
+      "gmCue": "Someone is following the party, or a short sting before a reveal. Under two minutes, muffled and very low.",
       "annotationStatus": "draft",
-      "confidence": "low",
+      "confidence": "medium",
       "researchSources": ["https://www.nin.wiki/Right_Behind_You"],
-      "notes": "Low-confidence draft from official title plus NIN Wiki dark muffled piano and low drone; needs secondary support."
+      "notes": "NIN Wiki: dark muffled piano and a low drone. Measured the darkest-sounding track in the module with no pulse; short (1:42)."
     },
     {
       "id": "ghosts-vi-locusts-13",
@@ -1766,22 +1758,22 @@
         "https://www.nin.com/discography/",
         "https://drive.google.com/drive/folders/1Ju0YG1l8JkdyT5bkcKSsTGgzjLU3ofNx"
       ],
-      "rpgTitle": "Intrusion",
-      "tags": ["horror", "technology", "intrusion", "high-tension"],
+      "rpgTitle": "Whispers",
+      "tags": ["tense", "menacing", "horror", "ritual"],
       "ratings": {
-        "intensity": 4,
+        "intensity": 3,
         "darkness": 5,
         "tension": 5,
         "weirdness": 5
       },
-      "gmCue": "Use for intrusive voices, unwanted signals, or a long scene where the environment will not let up.",
+      "gmCue": "A long scene somewhere that won't let up: a cult's inner sanctum, Chaos voices. Pulsing for the first seven minutes, then a quieter, drone-heavy back half. Heads-up: whispered vocal samples throughout.",
       "annotationStatus": "draft",
       "confidence": "high",
       "researchSources": [
         "https://www.nin.wiki/Turn_This_Off_Please",
         "https://pitchfork.com/reviews/albums/nine-inch-nails-ghosts-v-together-ghosts-vi-locusts/"
       ],
-      "notes": "Pitchfork notes sampled vocal susurrus; NIN Wiki notes pulsing synths, odd percussion loops, drones, and piano."
+      "notes": "NIN Wiki: pulsing synths, odd percussion loops, low drones, piano. Pitchfork: a susurrus of sampled vocals. Measured loud until ~7:30, then markedly quieter to the end of its 13 minutes."
     },
     {
       "id": "ghosts-vi-locusts-14",
@@ -1796,18 +1788,18 @@
         "https://drive.google.com/drive/folders/1Ju0YG1l8JkdyT5bkcKSsTGgzjLU3ofNx"
       ],
       "rpgTitle": "Exhaustion",
-      "tags": ["aftermath", "exhaustion", "horror", "low-tension"],
+      "tags": ["bleak", "melancholy", "aftermath", "rest"],
       "ratings": {
-        "intensity": 2,
+        "intensity": 1,
         "darkness": 4,
-        "tension": 3,
-        "weirdness": 4
+        "tension": 2,
+        "weirdness": 3
       },
-      "gmCue": "Use for exhaustion, late-night aftermath, or a scene where characters are too tired to feel safe.",
+      "gmCue": "Dragging yourselves to shelter after a disaster, wounded and low on everything. Heavy, slow piano chords; the last 40 seconds are nearly silent.",
       "annotationStatus": "draft",
-      "confidence": "low",
+      "confidence": "medium",
       "researchSources": ["https://www.nin.wiki/So_Tired"],
-      "notes": "Low-confidence draft from official title and NIN Wiki heavy atonal piano/gamelan-like description; needs secondary support."
+      "notes": "NIN Wiki: heavy atonal piano chords with a gamelan-like character. Measured quiet and dark-sounding with no pulse, fading to near silence after ~3:00."
     },
     {
       "id": "ghosts-vi-locusts-15",
@@ -1821,15 +1813,15 @@
         "https://www.nin.com/discography/",
         "https://drive.google.com/drive/folders/1Ju0YG1l8JkdyT5bkcKSsTGgzjLU3ofNx"
       ],
-      "rpgTitle": "Aftermath",
-      "tags": ["aftermath", "dawn", "recovery", "hopeful"],
+      "rpgTitle": "First Light",
+      "tags": ["hopeful", "melancholy", "aftermath", "rest"],
       "ratings": {
         "intensity": 2,
         "darkness": 3,
-        "tension": 3,
-        "weirdness": 3
+        "tension": 2,
+        "weirdness": 2
       },
-      "gmCue": "Use for aftermath near dawn, partial resolution, or a scene that ends the night without making it safe.",
+      "gmCue": "The night is over but not won; the survivors watch the sun come up. Heads-up: it swells to its loudest around 3:00 to 4:10, the closest Locusts gets to grand.",
       "annotationStatus": "draft",
       "confidence": "high",
       "researchSources": [
@@ -1837,7 +1829,7 @@
         "https://pitchfork.com/reviews/albums/nine-inch-nails-ghosts-v-together-ghosts-vi-locusts/",
         "https://musicmattersmedia.com/2020/05/31/nine-inch-nails-ghosts-v-together-ghosts-vi-locusts-album-review/"
       ],
-      "notes": "Pitchfork notes cyclical heartbeat; Music Matters notes near-dawn implication; NIN Wiki supports heartbeat-like loop and drones."
+      "notes": "NIN Wiki: mallet sounds, synth drones, muffled heartbeat-like loop. Pitchfork: a cyclical heartbeat; Music Matters: hints of full orchestra. Measured a strong swell around 3:00 to 4:10."
     }
   ]
 }

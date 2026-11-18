@@ -1,7 +1,7 @@
 import { t as e } from "../constants-m9fiLoN_.js";
 //#region src/module/apps/music-browser/open-music-browser-application.ts
 async function t() {
-	let { MusicBrowserApplication: e } = await import("../MusicBrowserApplication-Do-OhQ3m.js");
+	let { MusicBrowserApplication: e } = await import("../MusicBrowserApplication-wb87n4mX.js");
 	await new e().render(!0);
 }
 //#endregion
